@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hello World</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="changeVisibility">Toggle Text</button>
+    <p v-if="visibleText">{{ message }}</p>
+    <input v-model="message">
+    <br>
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+    <input v-model="item">
+    <button v-on:click="addItemToList">Add</button>
+    <button v-on:click="removeItemFromList">Remove</button>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World!',
+        visibleText: true,
+        item: '',
+        todos: [
+          { text: 'One' },
+          { text: 'Bit' },
+          { text: 'Code' },
+          { text: 'Tutorial' },
+        ],
+      },
+      methods: {
+        changeVisibility() {
+          this.visibleText = !this.visibleText;
+        },
+        addItemToList() {
+          this.todos.push({ text: this.item });
+        },
+        removeItemFromList() {
+          this.todos.pop();
+        },
+      },
+    });
+  </script>
+</body>
+</html>
