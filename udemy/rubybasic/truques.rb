@@ -68,4 +68,36 @@ puts "LUA".downcase
 ### CONTANDO CARACTERES ##
 #puts "laranja".count("a")
 
-## 
+## REMOVENDO ELEMENTOS DO INÍCIO DO ARRAY COM O MÉTODO .drop() ##
+## REMOVENDO ELEMENTOS DO ARRAY COM O MÉTODO .delete() ##
+
+## Este método elimina os dois primeiros índices do array ##
+#puts a = [3, 4, 5, 6, 7, 8].drop(2)
+#puts a = [3, 4, 5, 6, 7, 8].delete(4)
+
+## LISTANDO OS ARQUIVOS DO DIRETÓRIO ATUAL ##
+=begin
+arquivos = system 'dir'
+print arquivos
+=end
+
+## ESCAPE EM RUBY ##
+# Adicionando aspas em uma frase ##
+=begin
+puts "Eu tomei \"suco\" hoje"
+puts "======================"
+#Quebrando uma linha com \n
+puts "Eu tomei suco \n hoje"
+puts "======================"
+# Tabulando com \t
+puts "\t eu tomei suco hoje"
+puts "======================"
+#Acrescentando uma barra (\) no texto
+puts "Eu tomei 1\\3 do suco"
+=end
+
+## Colocando aspas duplas no texto usando aspas simples e duplas ##
+#puts 'Eu tomei "suco" hoje'
+
+## Gerando um número aleatório ##
+#puts rand(50)
