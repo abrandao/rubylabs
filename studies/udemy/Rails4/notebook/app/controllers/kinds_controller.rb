@@ -4,6 +4,7 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index
+    @name = "Batoul"
     @kinds = Kind.all
   end
 
