@@ -19,9 +19,8 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :kind_id %><br>
-    <%= f.text_field :kind_id %>
+  <div class="field">    
+    <%= collection_select(:contact, :kind_id, @kind_options_for_select, :id, :description) %>
   </div>
   <div class="field">
     <%= f.label :rmk %><br>

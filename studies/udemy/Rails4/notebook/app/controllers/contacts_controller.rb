@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
+    @meu_nome = "Anderson"
   end
 
   # GET /contacts/1
@@ -15,10 +16,12 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
-  end
+    options_for_select
+  end 
 
   # GET /contacts/1/edit
   def edit
+    options_for_select
   end
 
   # POST /contacts
@@ -62,6 +65,11 @@ class ContactsController < ApplicationController
   end
 
   private
+
+    def options_for_select
+      @kind_options_for_select = Kind.all
+    end
+    
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
       @contact = Contact.find(params[:id])
