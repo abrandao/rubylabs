@@ -1,4 +1,4 @@
-<%= form_for(@phone) do |f| %>
+<%= form_for(@phone, html: {class: "basic-grey"}) do |f| %>
   <% if @phone.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@phone.errors.count, "error") %> prohibited this phone from being saved:</h2>
@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <h1>Phones</h1>
+
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
@@ -20,6 +22,8 @@
     <%= f.text_field :contact_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar", class: "button" %>
+    <%= link_to 'Back', phones_path, class: "button" %>
+    <%= link_to 'Index',  root_path, class: "button" %>
   </div>
 <% end %>
