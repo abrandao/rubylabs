@@ -1,5 +1,2 @@
-module HomeHelper
-  def mostrar_meu_nome
-    "Batoul"
-  end
+module HomeHelper 
 end
