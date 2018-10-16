@@ -3,8 +3,7 @@ class KindsController < ApplicationController
 
   # GET /kinds
   # GET /kinds.json
-  def index
-    @name = "Batoul"
+  def index    
     @kinds = Kind.all
   end
 
