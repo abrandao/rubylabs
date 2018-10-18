@@ -1,0 +1,6 @@
+$LOAD_PATH << "/home/brandao/programming/rubylabs/studies/udemy/rubybasic/02 CLASSES E OBJETOS/load/pasta2/"
+load "arquivo2.rb"
+puts "--"
+load "arquivo2.rb"
+puts "--"
+load "arquivo3.rb"
