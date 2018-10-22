@@ -23,21 +23,21 @@
   </div>
   <div class="field">
     <%= f.label :kind_id %>
-    <%= collection_select(:contact, :kind_id, @kind_options_for_select, :id, :description) %>
+    <%= f.collection_select(:kind_id, @kind_options_for_select, :id, :description) %>
   </div>
   
   <%= f.fields_for :address do |address_fields| %>
   <div class="field">
-    <%= f.label :street %><br>
+    <%= address_fields.label :street %><br>
     <%= address_fields.text_field :street %>
   </div>
   <div class="field">
-    <%= f.label :city %><br>
+    <%= address_fields.label :city %><br>
     <%= address_fields.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :state %><br>
-    <%= address_fields.text_field :state %>    
+    <%= address_fields.label :state %><br>    
+    <%= address_fields.select :state, options_for_states(@contact.address.state) %>    
   </div>
   <% end %>
 
