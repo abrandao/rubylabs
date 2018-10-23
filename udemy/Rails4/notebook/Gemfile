@@ -49,3 +49,6 @@ end
 
 #A set of common locale data and translations to internationalize and/or localize your Rails applications.
 gem 'rails-i18n', '~> 4.0'
+
+#pt-BR text generator
+gem 'lerolero_generator'

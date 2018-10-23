@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Contacts</h1>
+<h1><%= "#{t('messages.listing')} #{@contacts.model_name.human(count: @contacts.count)}" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= Contact.human_attribute_name("name") %></th>
-      <th><%= Contact.human_attribute_name("email") %></th>
-      <th><%= Contact.human_attribute_name("kind") %></th>      
-      <th><%= Contact.human_attribute_name("rmk") %></th>
+      <th><%= @contacts.model.human_attribute_name("name") %></th>
+      <th><%= @contacts.model.human_attribute_name("email") %></th>
+      <th><%= @contacts.model.human_attribute_name("kind") %></th>
+      <th><%= @contacts.model.human_attribute_name("rmk") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,11 +18,10 @@
       <tr>
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.kind %></td>        
-        <td><%= contact.rmk %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= contact.kind.description %></td>        
+        <td><%= link_to t('buttons.show'), contact %></td>
+        <td><%= link_to t( 'buttons.edit'), edit_contact_path(contact) %></td>
+        <td><%= link_to t('buttons.destroy'), contact, method: :delete, data: { confirm: t('messages.confirm') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +29,5 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to "#{t('buttons.new')} #{@contacts.model_name.human}", new_contact_path %>
 <%= link_to 'Index',  root_path %>
