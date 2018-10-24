@@ -9,14 +9,16 @@
         other: Endereços
     attributes:
       contact:
-        name: "Nome"
-        email: "Email"
-        kind: "Tipo de Contato"
-        kind_id: "Tipo de Contato"
-        rmk: "Obs."     
+        name: Nome
+        email: Email
+        kind: Tipo de Contato
+        kind_id: Tipo de Contato
+        rmk: Obs.     
       address:
         street: Rua
         city: Cidade
         state: Estado
         contact_id: Contato
         contact: Contato
+      phone:
+        phone: Telefone
