@@ -58,3 +58,6 @@ gem 'pry-rails', :group => :development
 
 #Dynamic nested forms using jQuery made easy
 gem "cocoon"
+
+#A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'

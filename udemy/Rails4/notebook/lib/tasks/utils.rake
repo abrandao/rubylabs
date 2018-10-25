@@ -3,7 +3,7 @@ namespace :utils do
   desc "Popular banco de dados."
   task seed: :environment do
     puts "Gerando os contatos (Contacts)..."
-      10.times do |i|
+      100.times do |i|
         Contact.create!( 
           name: Faker::Name.name,
           email: Faker::Internet.email,
