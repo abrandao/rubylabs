@@ -75,3 +75,6 @@ gem 'bundler', '>= 1.8.4'
 
 # A simple, versatile notification library
 gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+
+# A front-end javascript framework
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
