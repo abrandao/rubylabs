@@ -64,3 +64,12 @@ gem 'kaminari'
 
 # I18n for kaminari
 gem 'kaminari-i18n'
+
+# Gem for installing nodejs
+gem 'nodejs-rails', '~> 0.0.1'
+
+# Use NPM packages in you Ruby on Rails application
+gem 'npm-rails', '~> 0.2.1'
+
+# Bower integration for your ruby projects
+gem 'bower-rails', '~> 0.11.0'

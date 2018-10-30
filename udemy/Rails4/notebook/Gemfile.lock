@@ -39,6 +39,7 @@ GEM
     arel (6.0.4)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bower-rails (0.11.0)
     builder (3.2.3)
     byebug (10.0.2)
     cocoon (1.2.12)
@@ -96,8 +97,11 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    nodejs-rails (0.0.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    npm-rails (0.2.1)
+      rails (>= 3.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -182,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bower-rails (~> 0.11.0)
   byebug
   cocoon
   coffee-rails (~> 4.1.0)
@@ -191,6 +196,8 @@ DEPENDENCIES
   kaminari
   kaminari-i18n
   lerolero_generator
+  nodejs-rails (~> 0.0.1)
+  npm-rails (~> 0.2.1)
   pry-rails
   rails (= 4.2.5)
   rails-i18n (~> 4.0)
