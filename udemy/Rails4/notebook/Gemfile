@@ -71,5 +71,4 @@ gem 'nodejs-rails', '~> 0.0.1'
 # Use NPM packages in you Ruby on Rails application
 gem 'npm-rails', '~> 0.2.1'
 
-# Bower integration for your ruby projects
-gem 'bower-rails', '~> 0.11.0'
+gem 'bundler', '>= 1.8.4'
