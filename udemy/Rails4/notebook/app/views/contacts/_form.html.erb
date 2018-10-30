@@ -34,7 +34,7 @@
       <%= render partial: "phone_fields", locals: { f: phones_fields } %>
     <% end %>    
     <div class="field">
-      <%= f.label :phones, ">" %><br>
+      <%= f.label :phones, "<span class='fa fa-phone' aria-hidden='true'></span>".html_safe %><br>
       <%= link_to_add_association('[Adicionar Telefone]', f, :phones) %>
     </div>    
   </div>
@@ -44,9 +44,8 @@
     <%= f.text_area :rmk %>
   </div>
   <div class="actions">    
-    <%= f.submit "Enviar", class: "button" %>
-    <%= link_to 'Back', contacts_path, class: "button" %>
-    <%= link_to 'Index',  root_path, class: "button" %>
+    <%= f.submit t('buttons.save'), class: "btn btn-primary" %>
+    <%= link_to t('buttons.back'), contacts_path, class: "btn btn-success" %>
   </div>
 
     <% if @contact.errors.any? %>
