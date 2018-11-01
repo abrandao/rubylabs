@@ -1,0 +1,105 @@
+/* ==========================================
+                          STYLE NOTES
+
+Inspired by https://dribbble.com/shots/2719315-Countdown-timer
+
+=============================================== */
+
+
+/* ---------------------------
+        BODY STYLE 
+----------------------------- */
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f4f4ff;
+text-transform: uppercase;
+font-size: 2em;
+}
+/* remove dotted outline on buttons */
+
+* {
+outline: 0px !important;
+-webkit-appearance: none;
+}
+/* ---------------------------
+  MAIN CONTAINER
+ ----------------------------- */
+#main-container {
+width: 35%;
+margin-top: 40px;
+height: 580px;
+box-shadow: 10px 90px 50px;
+}
+/* ---------------------------
+    HEADER PANEL
+ ----------------------------- */
+#heading-panel {
+height: 280px;
+width: 100%;
+padding-top:30px;
+color: #ffffff;
+text-align: center;
+background-color: #7f8fae;
+}
+/* ---------------------------
+    WORK DURATION PANEL 
+ ----------------------------- */
+
+.panel-2 {
+height: 100px;
+width: 100%;
+}
+#work-duration {
+text-align: center;
+width: 100%;
+padding: 10px;
+background-color: #dadaff;
+color: #ffffff;
+}
+/* ---------------------------
+    BREAK DURATION PANEL 
+ ----------------------------- */
+#break-duration {
+text-align: center;
+width: 100%;
+padding: 10px;
+background-color: #dadaff;
+color: #ffffff;
+}
+/* ---------------------------
+    BUTTON PANEL
+ ----------------------------- */
+#button-panel {
+text-align: center;
+background-color: #fffcd3;
+height: auto;
+width: 100%;
+}
+.btn {
+background-color: transparent;
+text-transform: uppercase;
+border: none;
+color: #6d7797;
+font-size: 1em;
+}
+.upperpanelBtn {
+height: 50px;
+font-size: 30px;
+}
+.upperpanelBtn:hover {
+background-color: #fc5d66;
+}
+/* ---------------------------
+    TIMER PANEL
+ ----------------------------- */
+#timer-panel {
+background-color: #fc5d66;
+color: #ffffff;
+height: 270px;
+width: 100%;
+text-align: center;
+padding: 20px;
+}
+#showtime {
+font-size: 40px;
+}
