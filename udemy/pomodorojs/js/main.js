@@ -14,3 +14,22 @@ increaseWork.addEventListener("click", function(){
   workClicks+= 1;
   workDisplay.innerHTML = workClicks;
 }, false);
+
+// Decrease work time
+var  decreaseWork = document.getElementById("minusWorkButton");
+decreaseWork.addEventListener("click", function() {
+  workClicks-= 1;
+  workDisplay.innerHTML = workClicks;
+  if(workClicks < 1){
+    workClicks = 1;
+    workDisplay.innerHTML = workClicks;
+  } //end of if
+});
+
+// Increase break time
+var increaseBreak = document.getElementById("addBreakButton");
+increaseBreak.addEventListener("click", function(){
+  breakClicks+= 1;
+  breakDisplay.innerHTML = breakClicks;
+}, false);
+
