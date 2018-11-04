@@ -11,19 +11,17 @@
     <title>to_bet</title>
   </head>
   <body>
-    <h1>To bet javascript</h1>
-
-    <form class="form-inline">
+    <h1 id="presentation">To bet javascript</h1>
+    
       <div class="form-group mb-2">       
-        <input type="text" readonly class="form-control-plaintext" id="value" value="Valor Inicial">
+        <label type="text" readonly class="form-control-plaintext" id="show-Value">Valor Inicial</label>
       </div>
-      <div class="form-group mx-sm-3 mb-2">
-        <label id="receiveValue" class="sr-only">Insira o valor</label>
-        <input type="text" class="form-control" id="receiveValue" placeholder="Insira o valor">
-      </div>
-      <button type="submit" class="btn btn-primary mb-2">Transferir</button>
-    </form>
 
+      <div class="form-group mx-sm-3 mb-2">        
+        <input type="text" class="form-control" id="receive-Value" placeholder="Insira o valor">
+      </div>
+      
+      <button class="btn btn-default btn-success" id="transfer-Button">Transferir</button>
 
     <!-- Optional JavaScript -->
     <script src="js/main.js"></script>
