@@ -24,7 +24,7 @@ decreaseWork.addEventListener("click", function() {
     workClicks = 1;
     workDisplay.innerHTML = workClicks;
   } //end of if
-});
+}, false);
 
 // Increase break time
 var increaseBreak = document.getElementById("addBreakButton");
@@ -33,3 +33,13 @@ increaseBreak.addEventListener("click", function(){
   breakDisplay.innerHTML = breakClicks;
 }, false);
 
+// Decrease break time
+var decreaseBreak = document.getElementById("minusBreakButton");
+decreaseBreak.addEventListener("click", function(){
+  breakClicks-= 1;
+  breakDisplay.innerHTML = breakClicks;
+  if(breakClicks < 1){
+    breakClicks = 1;
+    breakDisplay.innerHTML = breakClicks;
+  } //end of if
+}, false);
