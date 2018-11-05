@@ -1,5 +1,4 @@
 //Global Variables
-
 var workClicks = 25;
 var breakClicks = 5;
 var workDisplay = document.getElementById("work-display");
@@ -43,3 +42,29 @@ decreaseBreak.addEventListener("click", function(){
     breakDisplay.innerHTML = breakClicks;
   } //end of if
 }, false);
+
+// function start
+function start() {
+  count = workClicks * 60;  
+  workSession = setInterval(workCountDown, 1000);
+} //end of function
+
+// function workCountDown
+function workCountDown() {   
+  var seconds = count;
+  var hours = Math.floor(seconds/3600);  
+  seconds -= hours * 3600;
+  seconds = seconds - (hours * 3600);  
+  var minutes = Math.floor(seconds/60);
+  seconds -= minutes * 60;    
+  document.getElementById("showtime").innerHTML = ('00' + hours).slice(-2) +":" + ('00' + minutes).slice(-2) + ":" + ('00' + seconds).slice(-2); 
+  count--; 
+  if(count < 0) {
+    clearInterval(workSession);
+    workSession = null;
+    document.getElementById("showtime").innerHTML = "Starting Break";
+    var breakDelay = setTimeout(function(){
+      startBreak();
+    }, 3000);
+  } //end of if
+} //end of function
