@@ -97,3 +97,11 @@ function reset() {
   document.getElementById("pause").disabled = false;
   document.getElementById("resume").disabled = false;
 } // end of function
+
+// function startBreak
+function startBreak() {
+    count = breakClicks * 60;
+    breakSession = setInterval(breakCountDown,1000);
+    document.getElementById("pause").disabled = true;
+    document.getElementById("resume").disabled = true;
+} // end of function
