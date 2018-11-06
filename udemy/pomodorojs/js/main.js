@@ -105,3 +105,25 @@ function startBreak() {
     document.getElementById("pause").disabled = true;
     document.getElementById("resume").disabled = true;
 } // end of function
+
+// function breakCountDown
+function breakCountDown() {
+  document.getElementById("timer-panel").style.backgroundColor = "lightblue";
+  
+  var seconds = count;
+  var hours = Math.floor(seconds/3600);  
+  seconds -= hours * 3600;
+  seconds = seconds - (hours * 3600);  
+  var minutes = Math.floor(seconds/60);
+  seconds -= minutes * 60;    
+  document.getElementById("showtime").innerHTML = ('00' + hours).slice(-2) +":" + ('00' + minutes).slice(-2) + ":" + ('00' + seconds).slice(-2); 
+  count--;
+
+  if(count < 0) {
+    clearInterval(breakSession);
+    breakSession = null;
+    var message = setTimeout(function() {
+      document.getElementById("showtime").innerHTML = "Congrats for complete POMODORO";
+    }, 3000)
+  } //end of if
+} // end of function
