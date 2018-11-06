@@ -68,3 +68,13 @@ function workCountDown() {
     }, 3000);
   } //end of if
 } //end of function
+
+// function pause
+function pause() {
+  clearInterval(workSession);
+  clearInterval(breakSession);
+  workSession = null;
+  breakSession = null;
+} //end of function
+
+
