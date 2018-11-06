@@ -77,4 +77,7 @@ function pause() {
   breakSession = null;
 } //end of function
 
-
+// function resume
+function resume() {
+  workSession = setInterval(workCountDown, 1000);
+} //end of function
