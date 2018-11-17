@@ -5,8 +5,8 @@ v1 = gets.chomp.to_i
 # Condicional IF
 if v1 > 10 then
   puts "O valor digitado é maior que 10"
-elsif v1> 5
-  puts "O valor digitado é maior que 5"
+elsif v1>= 5
+  puts "O valor é maior ou igual a 5 (entre 5 e 10)"
 else
   puts "O valor digitado é menor que 5"
 end
@@ -23,7 +23,7 @@ puts "----------------------------------------"
 =end
 
 # case .. when
-
+=begin
 puts "Escolha um número entre 1 e 5: "
 v1 = gets.chomp.to_i
 
@@ -43,3 +43,4 @@ case v1
     v1 = gets.chomp.to_i
     puts "Você escolheu a opção: #{v1}"
 end
+=end
