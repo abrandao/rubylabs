@@ -1,5 +1,5 @@
 class Calculadora
-
+  
   def enter
     puts "Entre com o primeiro valor: "
     num = gets.chomp.to_i
