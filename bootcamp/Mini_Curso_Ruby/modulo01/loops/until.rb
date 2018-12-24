@@ -12,7 +12,7 @@ puts "-----------------"
 count = 1
 
 begin
-  puts "countn = #{count}"
+  puts "count = #{count}"
   count += 1
 end until count > 5
 
