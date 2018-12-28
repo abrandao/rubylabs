@@ -4,4 +4,4 @@ services:
     build: .
     volumes:
       - .:/app
-    tty: true       
+    tty: true
