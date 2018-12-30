@@ -1,4 +1,13 @@
+module FazSoma
+  def soma(a, b)
+    puts a + b
+  end
+end
+
 class Person
+
+  include FazSoma
+  
   def initialize(name, age, height, sex)
     @name = name
     @age = age
