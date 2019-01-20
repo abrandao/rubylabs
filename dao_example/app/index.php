@@ -1,5 +1,15 @@
 <?php
 
+require_once("config.php");
+
+$sql = new Sql();
+
+$posts = $sql->select("SELECT * FROM posts");
+
+echo json_encode($posts);
+
+var_dump($posts);
+/*
 $dbuser = $_ENV['MYSQL_USER'];
 $dbpass = $_ENV['MYSQL_PASS'];
 
@@ -19,4 +29,4 @@ try {
 
 } catch(PDOException $e) {
     echo $e->getMessage();
-}
+}*/
