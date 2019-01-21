@@ -2,13 +2,20 @@
 
 require_once("config.php");
 
+$root = new Usuario();
+
+$root->loadById(1);
+
+echo $root;
+
+/*
 $sql = new Sql();
 
-$posts = $sql->select("SELECT * FROM posts");
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
-echo json_encode($posts);
+echo json_encode($usuarios);
+*/
 
-var_dump($posts);
 /*
 $dbuser = $_ENV['MYSQL_USER'];
 $dbpass = $_ENV['MYSQL_PASS'];
