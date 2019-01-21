@@ -1,43 +1,23 @@
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-- Adminer 4.7.0 MySQL dump
 
-CREATE DATABASE `blog`;
-USE `blog`;
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-# Dump of table posts
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `posts`;
-
-CREATE TABLE `posts` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(200) NOT NULL DEFAULT '',
-  `body` text NOT NULL,
-  PRIMARY KEY (`id`)
+DROP TABLE IF EXISTS `tb_usuarios`;
+CREATE TABLE `tb_usuarios` (
+  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
+  `deslogin` varchar(64) NOT NULL,
+  `dessenha` varchar(256) NOT NULL,
+  `dtcadastro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idusuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-LOCK TABLES `posts` WRITE;
-/*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `tb_usuarios` (`idusuario`, `deslogin`, `dessenha`, `dtcadastro`) VALUES
+(1,	'batoul',	'kamel',	'2019-01-21 13:20:50'),
+(2,	'Anderson',	'aquaman3234',	'2019-01-21 19:39:04'),
+(3,	'Andressa',	'rsrts',	'2019-01-21 20:04:46'),
+(4,	'Roberto',	'abc123',	'2019-01-21 20:14:35');
 
-INSERT INTO `posts` (`id`, `title`, `body`)
-VALUES
-	(1,'Primeiro Post','Conteúdo do primeiro post'),
-	(2,'Segundo Post','Conteúdo do segundo post'),
-	(3,'Terceiro Post','Conteúdo do terceiro post');
-
-/*!40000 ALTER TABLE `posts` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- 2019-01-21 20:15:30
