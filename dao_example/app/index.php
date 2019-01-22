@@ -22,9 +22,23 @@ echo json_encode($search);
 */
 
 // Carrega um usuário usando login e senha
+/*
 $usuario = new Usuario();
 $usuario->login("batoul", "kamel");
 echo $usuario;
+*/
+
+// Insere um novo usuário
+/*
+$aluno = new Usuario("aluno", "123456");
+$aluno->insert();
+echo $aluno;
+*/
+
+// 
+$usuario = new Usuario();
+$usuario->loadById(19);
+$usuario->update("professor", "senhaProfessor");
 
 /*
 $sql = new Sql();
@@ -33,25 +47,3 @@ $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
 echo json_encode($usuarios);
 */
-
-/*
-$dbuser = $_ENV['MYSQL_USER'];
-$dbpass = $_ENV['MYSQL_PASS'];
-
-try {
-    $pdo = new PDO("mysql:host=mysql;dbname=blog", $dbuser, $dbpass);
-    $statement = $pdo->prepare("SELECT * FROM posts");
-    $statement->execute();
-    $posts = $statement->fetchAll(PDO::FETCH_OBJ);
-    
-    echo "<h2>Posts</h2>";
-    echo "<ul>";
-    foreach ($posts as $post ) {
-        echo "<li>".$post->title."</li>";
-        echo "<li>".$post->body."</li>";
-    }
-    echo "</ul>";
-
-} catch(PDOException $e) {
-    echo $e->getMessage();
-}*/
