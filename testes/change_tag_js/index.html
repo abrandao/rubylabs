@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
+    <title>Converta Moedas</title>
+  </head>
+  <body>   
+
+    <form accept-charset="UTF-8">
+      <div class='local_currency'>
+        <div class='form-group'>
+          <h3><p class='title'>Moeda que deseja converter</p></h3>
+          <select name="source_currency" id="source_currency" class="form-control">
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option selected="selected" value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+        </div>
+
+        <div class='form-group'>
+          <input type='number' name='amount' id='amount' class='form-control' placeholder='Valor' step='any' required>
+        </div>
+      </div>
+                  
+      <div class='destination_currency'>
+        <div class='form-group'>
+          <h3><p class='title'>Moeda convertida</p></h3>
+          <select name="target_currency" id="target_currency" class="form-control">
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CNY">CNY</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option selected="selected" value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PHP">PHP</option>
+            <option value="PLN">PLN</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+            <option value="ZAR">ZAR</option>
+          </select>
+        </div>
+      
+      </div>
+      <div class='form-group'>
+        <input type='text' id='result' class='form-control' readonly>
+      </div>
+      <div>
+        <button onclick="convert()"">CONVERTER</button>
+        <button type='submit' class='btn btn-primary btn-exchange col-md-12' onclick='invert()'>INVERTER</button>
+      </div>
+    </form>
+    <script src="myscript.js"></script>
+    <script src="convert.js"></script>    
+  </body>
+  
+</html>

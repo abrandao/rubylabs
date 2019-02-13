@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Write something in the text field to trigger a function.</p>
+
+<input type="text" id="test-input" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+// Get the input box
+var textInput = document.getElementById('test-input');
+
+// Init a timeout variable to be used below
+var timeout = null;
+
+// Listen for keystroke events
+textInput.onkeyup = function (e) {
+
+    // Clear the timeout if it has already been set.
+    // This will prevent the previous task from executing
+    // if it has been less than <MILLISECONDS>
+    clearTimeout(timeout);
+
+    // Make a new timeout set to go off in 800ms
+    timeout = setTimeout(function () {
+        console.log('Input Value:', textInput.value);
+    }, 500);
+};
+</script>
+
+</body>
+</html>
