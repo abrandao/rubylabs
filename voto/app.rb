@@ -19,8 +19,8 @@ class App < Sinatra::Base
     @store = YAML::Store.new 'votos.yml'
     @store.transaction do
       @store['votos'] || {}
-      #@store['votos'][@voto] ||= 0
-      #@store['votos'][@voto] += 1
+      @store['votos'][@voto] ||= 0
+      @store['votos'][@voto] += 1
     end
     erb :cast
   end
