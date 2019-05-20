@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
-  def show
+  def show    
   end
 
   def new
@@ -32,9 +32,9 @@ class ContactsController < ApplicationController
     end
   end
 
-  def destroy
-    @contact.destroy
-    redirect_to contact_path
+  def destroy    
+    @contact.destroy    
+    redirect_to root_path
   end
 
   private
