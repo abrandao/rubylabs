@@ -1,22 +1,27 @@
-<%= form_for (@contact) do |form| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contacts.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-      <ul>
-      <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @contact do |f| %>
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+ <%= f.fields_for :address do |a| %>
+   <br> 
+   <%= a.label :street %> 
+   <%= a.text_field :street %>
+   <br>
+   <%= a.label :number %> 
+   <%= a.text_field :number %>
+   <br>
+   <%= a.label :neighborhood %> 
+   <%= a.text_field :neighborhood %>
+   <br>   
+ <% end %>
+  <h3>Telephones: </h3>
+  <div id="phones">
+    <%= f.fields_for :phones do |p| %>
+      <%= render 'phone_fields', f: p %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add phone', f, :phones %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+ <br>
+ <%= f.submit %>
 <% end %>
