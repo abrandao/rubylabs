@@ -1,0 +1,144 @@
+Started GET "/rails/db/tables/users/destroy?pk_id=5" for 192.168.32.1 at 2019-08-15 18:48:20 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#destroy as JS
+  Parameters: {"pk_id"=>"5", "table_id"=>"users"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.4ms)[0m  [1m[31mDELETE FROM users WHERE id = '5';[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/destroy.js.erb
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (13.9ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (15.9ms)
+  [1m[36m Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (16.4ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (12.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (14.3ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_sql.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_data.html.erb (164.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/destroy.js.erb (171.4ms)
+Completed 200 OK in 222ms (Views: 130.2ms | ActiveRecord: 54.7ms)
+
+
+Started GET "/rails/db/tables/users/destroy?pk_id=6" for 192.168.32.1 at 2019-08-15 18:48:30 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#destroy as JS
+  Parameters: {"pk_id"=>"6", "table_id"=>"users"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (7.5ms)[0m  [1m[31mDELETE FROM users WHERE id = '6';[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/destroy.js.erb
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.8ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (14.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (13.8ms)
+  [1m[36m Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (18.2ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (15.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_sql.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_data.html.erb (160.4ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/destroy.js.erb (166.3ms)
+Completed 200 OK in 218ms (Views: 132.5ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/rails/db/standalone" for 192.168.32.1 at 2019-08-15 18:48:34 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#standalone as HTML
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/dashboard/standalone.html.erb within layouts/rails_db/application
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/dashboard/standalone.html.erb within layouts/rails_db/application (3.9ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_header.html.erb (3.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_sidebar.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_gems.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_footer.html.erb (3.7ms)
+Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilay"], ["level", 12], ["kind", 0], ["created_at", "2019-08-15 18:53:53.674812"], ["updated_at", "2019-08-15 18:53:53.674812"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilays"], ["level", 12], ["kind", 1], ["created_at", "2019-08-15 18:54:04.108425"], ["updated_at", "2019-08-15 18:54:04.108425"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilays"], ["level", 12], ["kind", 1], ["created_at", "2019-08-15 19:15:29.099894"], ["updated_at", "2019-08-15 19:15:29.099894"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilays"], ["level", 12], ["kind", 1], ["created_at", "2019-08-15 19:15:31.636753"], ["updated_at", "2019-08-15 19:15:31.636753"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilays"], ["level", 12], ["kind", 1], ["created_at", "2019-08-15 19:15:46.005729"], ["updated_at", "2019-08-15 19:15:46.005729"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "Rilays"], ["level", 12], ["kind", 1], ["created_at", "2019-08-15 19:15:52.241700"], ["updated_at", "2019-08-15 19:15:52.241700"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "omni"], ["level", 4], ["kind", 0], ["created_at", "2019-08-15 19:17:16.830917"], ["updated_at", "2019-08-15 19:17:16.830917"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/rails/db/" for 192.168.32.1 at 2019-08-15 19:21:57 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#index as HTML
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (2.9ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_header.html.erb (4.1ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_sidebar.html.erb (3.2ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_gems.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_footer.html.erb (3.7ms)
+Completed 200 OK in 99ms (Views: 94.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/db/tables/users/data" for 192.168.32.1 at 2019-08-15 19:22:02 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/data.js.erb
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (12.0ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (10.5ms)
+  [1m[36m Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (10.0ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (9.4ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (10.0ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (8.8ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (7.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (9.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (10.8ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (10.1ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_row.html.erb (10.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_data.html.erb (199.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/data.js.erb (204.0ms)
+Completed 200 OK in 246ms (Views: 116.2ms | ActiveRecord: 99.7ms)
+
+
+Started GET "/rails/db/tables/users" for 192.168.32.1 at 2019-08-15 19:22:13 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#show as JS
+  Parameters: {"id"=>"users"}
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/show.js.erb
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_show.html.erb (48.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/show.js.erb (64.4ms)
+Completed 200 OK in 101ms (Views: 54.7ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/rails/db/sql" for 192.168.32.1 at 2019-08-15 19:22:31 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::SqlController#index as HTML
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/sql/_history.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/sql/index.html.erb within layouts/rails_db/application (22.1ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_header.html.erb (3.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_sidebar.html.erb (2.1ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_gems.html.erb (0.9ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_footer.html.erb (4.3ms)
+Completed 200 OK in 107ms (Views: 91.9ms | ActiveRecord: 12.0ms)
+
+
