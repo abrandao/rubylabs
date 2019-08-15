@@ -142,3 +142,697 @@ Processing by RailsDb::SqlController#index as HTML
 Completed 200 OK in 107ms (Views: 91.9ms | ActiveRecord: 12.0ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Migrating to ChangeKindToBeIntegerInUsers (20190815192850)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "kind" TYPE integer[0m
+  ↳ db/migrate/20190815192850_change_kind_to_be_integer_in_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Migrating to ChangeKindToBeIntegerInUsers (20190815192850)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (11.4ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "kind" TYPE integer USING CAST(kind AS integer)[0m
+  ↳ db/migrate/20190815192850_change_kind_to_be_integer_in_users.rb:3
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:13 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:16 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:17 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:17 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:18 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:18 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:19 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:19 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:19 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/db/" for 192.168.48.1 at 2019-08-15 19:36:20 +0000
+Cannot render console from 192.168.48.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (5012.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_development"[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (5012.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_development"[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started GET "/" for 192.168.80.1 at 2019-08-15 19:39:12 +0000
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (5012.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_development"[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (21.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "nickname" character varying, "level" integer, "kind" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "weapons" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "weapons" ("id" bigserial primary key, "name" character varying, "description" character varying, "power_base" integer, "power_step" integer, "level" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "nickname" character varying, "level" integer, "kind" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "weapons" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE TABLE "weapons" ("id" bigserial primary key, "name" character varying, "description" character varying, "power_base" integer, "power_step" integer, "level" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-08-15 19:42:42.799688"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-08-15 19:42:42.805811"], ["key", "environment"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Migrating to ChangeKindToBeIntegerInUsers (20190815192850)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (19.5ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "kind" TYPE integer USING CAST(kind AS integer)[0m
+  ↳ db/migrate/20190815192850_change_kind_to_be_integer_in_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190815192850"]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  ↳ /usr/local/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/bin/rake:23
+Started GET "/rails/db/tables/users/data" for 192.168.80.1 at 2019-08-15 19:43:41 +0000
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RailsDb::TablesController#data as HTML
+  Parameters: {"table_id"=>"users"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_exp_col.html.erb (0.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (36.5ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_condition_fields.html.erb (10.8ms)
+  [1m[36m Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_sql.html.erb (0.4ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/_data.html.erb (93.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/tables/data.html.erb within layouts/rails_db/application (96.1ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_header.html.erb (4.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_sidebar.html.erb (2.6ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/rails_db-2.0.6/app/views/rails_db/shared/_footer.html.erb (4.7ms)
+Completed 200 OK in 472ms (Views: 418.3ms | ActiveRecord: 9.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("nickname", "level", "kind", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nickname", "omni"], ["level", 3], ["kind", 0], ["created_at", "2019-08-15 19:45:05.838046"], ["updated_at", "2019-08-15 19:45:05.838046"]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
