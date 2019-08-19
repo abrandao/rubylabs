@@ -1,1 +1,0 @@
-A simple httparty usage with yandex translator
