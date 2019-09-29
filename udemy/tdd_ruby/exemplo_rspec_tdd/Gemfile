@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-
-# BDD for Ruby
-gem 'rspec', '~> 3.8'
