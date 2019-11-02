@@ -9,23 +9,25 @@
   "O jogador X ganhou a disputa por X a Y" ou "O jogo empatou"
 */
 
+//Definindo as variáveis
 var result = 'SRSPRSRPPSPR';
 var rst = result.split('');
 var jogadas = Object.keys(rst).length;
-
 var p1p = 0;
 var p2p = 0;
 
+//Atribuindo as jogadas aos jogadores #1 e #2
 for ( i=0; i<jogadas; i++) {
-
   if (i%2 == 0) {
-    var jg1 = rst[i];    
+    var jg1 = rst[i];
   } else {
-    var jg2 = rst[i];    
+    var jg2 = rst[i];
+    // Chamando a função exatamente a cada lance do jogaor #2
     jokenpo();
   }  
 }
 
+// Pontuando de acordo com as jogadas
 function jokenpo() {  
   if (jg1 == 'S' && jg2 == 'R') {
     p2p += 1;
@@ -42,6 +44,7 @@ function jokenpo() {
   }
 }
 
+// Exibindo os resultados
 if (p1p > p2p) {
   console.log("O jogador número #1 venceu por " + p1p + " a " + p2p)
 } else if (p2p > p1p) {
