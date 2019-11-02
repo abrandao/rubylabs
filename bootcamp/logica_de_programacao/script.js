@@ -9,30 +9,43 @@
   "O jogador X ganhou a disputa por X a Y" ou "O jogo empatou"
 */
 
-var result = 'SRRSPSPRPPRS';
+var result = 'SRSPRSRPPSPR';
 var rst = result.split('');
-console.log(rst);
 var jogadas = Object.keys(rst).length;
-console.log(jogadas);
+
+var p1p = 0;
+var p2p = 0;
 
 for ( i=0; i<jogadas; i++) {
-  //console.log(rst[i]);
+
   if (i%2 == 0) {
-    console.log(rst[i] + " é um número par.");
+    var jg1 = rst[i];    
   } else {
-    console.log(rst[i] + " é um número ímpar.");
+    var jg2 = rst[i];    
+    jokenpo();
+  }  
+}
+
+function jokenpo() {  
+  if (jg1 == 'S' && jg2 == 'R') {
+    p2p += 1;
+  } else if (jg1 == 'S' && jg2 == 'P') {
+    p1p += 1;
+  } else if (jg1 == 'R' && jg2 == 'S') {
+    p1p += 1;
+  } else if (jg1 == 'R' && jg2 == 'P') {
+    p2p += 1;
+  } else if (jg1 == 'P' && jg2 == 'S') {
+    p2p += 1;
+  } else if (jg1 == 'P' && jg2 == 'R') {
+    p1p += 1;
   }
 }
 
-p1 = 4;
-p2 = 7;
-
-if (p1 > p2)
-  console.log("O jogador #1 venceu a disputa por " + p1 + " a " + p2 +".");
-else
-  console.log("O jogador #2 venceu a disputa por " + p2 + " a " + p1 +".");  
-
-
-  // TESTES
-  // console.log(Object.keys(rst).length);
-  // console.log("teste");
+if (p1p > p2p) {
+  console.log("O jogador número #1 venceu por " + p1p + " a " + p2p)
+} else if (p2p > p1p) {
+  console.log("O jogador número #2 venceu por " + p2p + " a " + p1p)
+} else {
+  console.log("O jogo terminou empatado, ambas marcaram " + p1p + " pontos.");  
+}
