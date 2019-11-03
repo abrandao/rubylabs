@@ -10,16 +10,24 @@ SAÍDA DESEJADA:
 'O vencedor é o jogador que usou X' ou 'O jogo empatou'.
 */
 
-console.log('hello2')
+array = [['0','X','O'],['0','O','X'],['X','O','X']]
 
-array = [['X','O','O'],['X','X','O'],['O','X','O']]
-
-console.log("=======================")
-console.log(array)
-console.log(array[0])
-console.log(array[1])
-console.log(array[2])
-console.log(array[0][2])
-
-
-// [0['0','1','2'],[1['0','1','2'],[2['0','1','2']]
+if ((array[0][0] == array[1][0]) && (array[0][0] == array[2][0])) {
+  console.log('Vitória de ' + array[2][0])
+} else if ((array[0][1] == array[1][1]) && (array[0][1] == array[2][1])) {
+  console.log('Vitória de ' + array[2][1])
+} else if ((array[0][2] == array[1][2]) && (array[0][2] == array[2][2])) {
+  console.log('Vitória de ' + array[2][2])
+} else if ((array[0][0] == array[0][1]) && (array[0][0] == array[0][2])) {
+  console.log('Vitória de ' + array[0][2])
+} else if ((array[1][0] == array[1][1]) && (array[1][0] == array[1][2])) {
+  console.log('Vitória de ' + array[1][2])
+} else if ((array[2][0] == array[2][1]) && (array[2][0] == array[2][2])) {
+  console.log('Vitória de ' + array[2][2])
+} else if ((array[0][0] == array[1][1]) && (array[0][0] == array[2][2])) {
+  console.log('Vitória de ' + array[2][2])
+} else if ((array[0][2] == array[1][1]) && (array[0][2] == array[2][0])) {
+  console.log('Vitória de ' + array[2][0])
+} else {
+  console.log("O jogo terminou empatado.")
+}
