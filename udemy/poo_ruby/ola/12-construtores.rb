@@ -17,11 +17,8 @@ class Pessoa
   end
 end
 
-#######
-
 pessoa1 = Pessoa.new("Anderson Brandão", 37)
 pessoa2 = Pessoa.new("Nathalia de Abreu", 27)
-
 
 puts pessoa1.nome
 puts pessoa1.idade
