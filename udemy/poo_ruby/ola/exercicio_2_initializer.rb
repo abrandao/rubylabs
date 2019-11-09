@@ -7,3 +7,31 @@
 
 -- Teste ao menos com 2 objetos
 =end
+
+class Papagaio
+  
+  attr_accessor :nome
+  attr_accessor :idade
+
+  def initialize(nome = 'Félix', idade = 2)
+    @nome = nome
+    @idade = idade
+  end
+
+  def repetir_frase(voz = "Curupaco!")
+    puts "Barulho: #{voz}"
+  end
+  
+end
+
+papagaio = Papagaio.new
+puts papagaio.nome
+puts papagaio.idade
+papagaio.repetir_frase
+
+puts "======================"
+
+papagaio2 = Papagaio.new("Garoto", 6)
+puts papagaio2.nome
+puts papagaio2.idade
+papagaio2.repetir_frase('Chocolate!!')
