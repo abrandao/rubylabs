@@ -8,6 +8,7 @@
 -- Teste ao menos com 2 objetos
 =end
 
+=begin
 class Papagaio
   
   attr_accessor :nome
@@ -35,3 +36,32 @@ papagaio2 = Papagaio.new("Garoto", 6)
 puts papagaio2.nome
 puts papagaio2.idade
 papagaio2.repetir_frase('Chocolate!!')
+=end
+
+class Papagaio
+  attr_accessor :nome
+  attr_accessor :idade
+
+  def initialize(nome, idade)
+    @nome = nome
+    @idade = idade
+  end
+
+  def repetir_frase(frase = "curupaco!")
+    frase
+  end
+end
+
+papagaio = Papagaio.new("José", 4)
+puts papagaio.nome
+puts papagaio.idade
+puts papagaio.repetir_frase
+puts papagaio.repetir_frase("Helloooo!!")
+
+puts "==========================="
+
+papagaio2 = Papagaio.new("Paulo", 2)
+puts papagaio2.nome
+puts papagaio2.idade
+puts papagaio2.repetir_frase
+puts papagaio2.repetir_frase("Yes!!!!")
