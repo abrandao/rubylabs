@@ -2,7 +2,7 @@ class Client
 
   attr_accessor :name, :company, :age, :date, :confirmation
 
-  def register
+  def form
     puts "Please, insert the client name: "
     @name = gets.chomp
     puts "Please, insert the client's company: "
@@ -20,13 +20,13 @@ class Client
     @confirmation = gets.chomp
     if confirmation == 'Y' || confirmation == 'y'
       open("db/#{name}.rb", 'w') { |f|
-        f << "class #{name}\n"
-        f << "attr_accessor :name, :company, :age, :date\n"
+        f << "class " + name.capitalize + "\n"
+        f << "  attr_accessor :name, :company, :age, :date\n"
         f << "  def client\n"
-        f << "    @name = '#{name}'\n"
+        f << "    @name = '" + name.capitalize + "'\n"
         f << "    @company = '#{company}'\n"
         f << "    @age = #{age}\n"
-        f << "    @date = #{date}\n"
+        f << "    @date = '#{date}'\n"
         f << "  end\n"
         f << "end"
       }

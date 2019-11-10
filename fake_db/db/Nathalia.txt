@@ -1,4 +1,0 @@
-Name: Nathalia
-Company: Escola
-Age: 27
-Date: 2019-11-10 10:32:30 -0300

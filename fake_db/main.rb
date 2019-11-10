@@ -1,9 +1,7 @@
 require_relative 'client'
-require_relative 'messages'
+require_relative 'menu'
 
-msg = Messages.new
-msg.start
+puts 'Welcome to Fake Register'
 
-clt = Client.new
-clt.register
-clt.print
+menu = Menu.new
+menu.menu_options
