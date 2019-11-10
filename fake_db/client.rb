@@ -19,10 +19,16 @@ class Client
     puts "Do you want confirm the register?(Y/N)"
     @confirmation = gets.chomp
     if confirmation == 'Y' || confirmation == 'y'
-      open("#{name}.txt", 'w') { |f|
-        f << "Four score\n"
-        f << "and seven\n"
-        f << "years ago\n"
+      open("db/#{name}.rb", 'w') { |f|
+        f << "class #{name}\n"
+        f << "attr_accessor :name, :company, :age, :date\n"
+        f << "  def client\n"
+        f << "    @name = '#{name}'\n"
+        f << "    @company = '#{company}'\n"
+        f << "    @age = #{age}\n"
+        f << "    @date = #{date}\n"
+        f << "  end\n"
+        f << "end"
       }
     else
       puts "The register was not saved"
@@ -31,11 +37,3 @@ class Client
   end
 
 end
-
-=begin
-  open('myfile.out', 'w') { |f|
-    f << "Four score\n"
-    f << "and seven\n"
-    f << "years ago\n"
-  }  
-=end
