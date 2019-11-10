@@ -16,6 +16,26 @@ class Client
   def print
     puts "Client's name, company, age and date of register: "
     puts "#{name}, #{company}, #{age}, #{date}."
+    puts "Do you want confirm the register?"
+    @confirmation = gets.chomp
+    if confirmation == 'Y'
+      open('myfile.out', 'w') { |f|
+        f << "Four score\n"
+        f << "and seven\n"
+        f << "years ago\n"
+      }
+    else
+      puts "The register was not saved"
+      puts "Thanks for using Fake DB Register"
+    end
   end
 
+end
+
+=begin
+  open('myfile.out', 'w') { |f|
+    f << "Four score\n"
+    f << "and seven\n"
+    f << "years ago\n"
+  }  
 end
