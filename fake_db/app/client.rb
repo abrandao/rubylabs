@@ -18,8 +18,8 @@ class Client
     puts "#{name}, #{company}, #{age}, #{date}."
     puts "Do you want confirm the register?(Y/N)"
     @confirmation = gets.chomp
-    if confirmation == 'Y' || confirmation == 'y'
-      open("db/#{name}.rb", 'w') { |f|
+    if confirmation == 'Y' || confirmation == 'y'      
+      open("app/db/#{name}.rb", 'w') { |f|
         f << "class " + name.capitalize + "\n"
         f << "  attr_accessor :name, :company, :age, :date\n"
         f << "  def client\n"
@@ -35,5 +35,13 @@ class Client
       puts "Thanks for using Fake DB Register"
     end
   end
-
+  
+  def list_clients
+    Dir.foreach("app/db") {
+      |x| puts "Got #{x}"
+    }
+    puts "=============="
+    puts Dir.entries("app/db")
+  end
+  
 end

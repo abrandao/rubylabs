@@ -2,7 +2,7 @@ require_relative 'client'
 
 class Menu
 
-  attr_accessor :option
+  attr_accessor :option 
 
   def menu_options
     puts "What do you want to do?"
@@ -10,18 +10,14 @@ class Menu
     puts "2 - List clients"
 
     @option = gets.chomp.to_i
+    clt = Client.new
     
     if option == 1
-      clt = Client.new
       clt.form
       clt.print
     else
-      list_clients
+      clt.list_clients
     end
-  end
-
-  def list_clients
-    Dir.foreach("db") {|x| puts "Got #{x}" }
   end
 
 end
