@@ -17,6 +17,13 @@ class Menu
       clt.print
     else
       clt.list_clients
+      puts "Do you want to choose a client?(Y/N)"
+      confirmation = gets.chomp
+      if confirmation == 'Y' || confirmation == 'y'
+        puts clt.list_clients
+      else
+        puts "Thanks for using Fake DB Register"
+      end
     end
   end
 

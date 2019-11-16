@@ -17,18 +17,13 @@ class Client
     puts "Client's name, company, age and date of register: "
     puts "#{name}, #{company}, #{age}, #{date}."
     puts "Do you want confirm the register?(Y/N)"
-    @confirmation = gets.chomp
-    if confirmation == 'Y' || confirmation == 'y'      
+    confirmation = gets.chomp
+    if confirmation == 'Y' || confirmation == 'y'
       open("app/db/#{name}.rb", 'w') { |f|
-        f << "class " + name.capitalize + "\n"
-        f << "  attr_accessor :name, :company, :age, :date\n"
-        f << "  def client\n"
-        f << "    @name = '" + name.capitalize + "'\n"
-        f << "    @company = '#{company}'\n"
-        f << "    @age = #{age}\n"
-        f << "    @date = '#{date}'\n"
-        f << "  end\n"
-        f << "end"
+        f << "name = '" + name.capitalize + "'\n"
+        f << "company = '#{company}'\n"
+        f << "age = #{age}\n"
+        f << "date = '#{date}'"
       }
     else
       puts "The register was not saved"
@@ -37,11 +32,12 @@ class Client
   end
   
   def list_clients
-    Dir.foreach("app/db") {
-      |x| puts "Got #{x}"
-    }
+    i = 2
+    clients = Dir.entries("app/db").sort
     puts "=============="
-    puts Dir.entries("app/db")
+    while i < clients.length
+      puts "Cliente #{i - 1}: #{clients[i]}"
+      i += 1
+    end
   end
-  
 end
