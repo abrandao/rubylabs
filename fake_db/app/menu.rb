@@ -2,7 +2,7 @@ require_relative 'client'
 
 class Menu
 
-  attr_accessor :option 
+  attr_accessor :option
 
   def menu_options
     puts "What do you want to do?"
@@ -20,7 +20,7 @@ class Menu
       puts "Do you want to choose a client?(Y/N)"
       confirmation = gets.chomp
       if confirmation == 'Y' || confirmation == 'y'
-        puts clt.list_clients
+        clt.choose_client
       else
         puts "Thanks for using Fake DB Register"
       end

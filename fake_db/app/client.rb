@@ -19,11 +19,11 @@ class Client
     puts "Do you want confirm the register?(Y/N)"
     confirmation = gets.chomp
     if confirmation == 'Y' || confirmation == 'y'
-      open("app/db/#{name}.rb", 'w') { |f|
-        f << "name = '" + name.capitalize + "'\n"
-        f << "company = '#{company}'\n"
-        f << "age = #{age}\n"
-        f << "date = '#{date}'"
+      open("app/db/#{name}.txt", 'w') { |f|
+        f << name.capitalize + "\n"
+        f << company + "\n"
+        f << age + "\n"
+        f << date
       }
     else
       puts "The register was not saved"
@@ -32,12 +32,15 @@ class Client
   end
   
   def list_clients
-    i = 2
     clients = Dir.entries("app/db").sort
-    puts "=============="
+    i = 2
     while i < clients.length
-      puts "Cliente #{i - 1}: #{clients[i]}"
+      puts "Cliente #{i - 1}: " + File.readlines("app/db/#{clients[i]}")[0]
       i += 1
     end
+  end
+
+  def choose_client
+    puts "Choosing a client"
   end
 end
