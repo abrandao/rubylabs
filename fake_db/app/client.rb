@@ -41,6 +41,16 @@ class Client
   end
 
   def choose_client
-    puts "Choosing a client"
+    puts "Choose a client:"
+    option = Dir.entries("app/db").sort
+    puts "==============="
+    puts "==============="
+    x = 2
+    while x < option.length
+      puts "#{x - 1} - " + File.readlines("app/db/#{option[x]}")[0]
+      x += 1
+    end
+    c = gets.chomp.to_i
+    puts option[c + 1]
   end
 end
