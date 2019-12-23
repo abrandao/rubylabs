@@ -30,5 +30,4 @@ describe 'Matchers de Comparação' do
 
     expect(x).to eq(y)
   end
-
 end
