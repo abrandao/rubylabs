@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ccc;
+  margin: 0;
+}
+
+.hero {
+  background-image: url(../imagens/bg-3.jpg);
+  height: 500px;
+  background-position: right center;
+  background-size: cover;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+}
+
+.hero-content h1 {
+  text-transform: uppercase;
+  font-size: 46px;
+  text-shadow: 3px 3px 2px #333;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.content-section {
+  background-color: white;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+section article header h2 {
+  border-bottom: solid 5px #787878;
+  background-color: #D3D3D3;
+  padding: 10px;
+}
+
+section article p {
+  font-size: 120%;
+}
+
+footer {
+  text-align: center;
+  background-color: #787878;
+  padding: 25px;
+  color: #fff;
+  font-size: 130%;
+  text-shadow: 3px 3px 2px #333;
+}
