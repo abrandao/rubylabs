@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+#main {
+  width: 80%;
+  margin: auto;  
+}
+
+.hero {
+  background-image: url(../imagens/topo.jpg);
+  height: 500px;
+  background-position: right center;
+  background-size: cover;
+  border-top: 1px solid transparent;
+}
+
+.hero nav ul {
+  text-align: right;
+  margin: 20px 50px 0 0;
+  background-color: blue;
+  display: inline;
+}
+
+.hero nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 10px;
+  border: 1px solid white;
+}
+
+.aligment-nav {
+  background-color: violet;
+}
