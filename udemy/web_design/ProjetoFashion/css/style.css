@@ -114,3 +114,13 @@ body {
   width: 100%;
   position: absolute;
 }
+
+footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #000;
+  color: #5889d6;
+  font-size: 130%;
+  text-shadow: 3px 3px 2px #333;
+}
