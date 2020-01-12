@@ -100,6 +100,15 @@ body {
   text-align: left;
 }
 
+.callme-section {
+  color: #092147;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1%;
+  font-size: 2.7em;
+  font-weight: bolder;
+}
+
 .map-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
