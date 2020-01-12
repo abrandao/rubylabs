@@ -37,7 +37,7 @@ body {
   background-color: violet;
 }
 
-#fashion-text {  
+#fashion-text {
   text-align: center;
   font-size: 1.2em;
   padding-top: 6%;
@@ -48,6 +48,37 @@ body {
 
 #fashion-text h1 {
   font-size: 2.8em;
+}
+
+.cards-section {
+  padding: 10px;
+  overflow: auto;
+}
+
+.card {
+  width: 32%;
+  float: left;
+  padding-bottom: 5%;
+}
+
+.card-1, .card-2 {
+  margin-right: 2%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 0;
+  text-align: center;
+  font-size: large;
+  color: #62666e;
 }
 
 #detalhe {
@@ -67,4 +98,19 @@ body {
   padding-right: 28%;
   font-size: 1.5em;
   text-align: left;
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
