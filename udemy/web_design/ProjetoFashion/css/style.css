@@ -5,7 +5,7 @@ body {
 
 #main {
   width: 80%;
-  margin: auto;  
+  margin: auto;
 }
 
 .hero {
@@ -16,20 +16,44 @@ body {
   border-top: 1px solid transparent;
 }
 
+.hero nav {
+  background-color: blueviolet;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .hero nav ul {
   text-align: right;
   margin: 20px 50px 0 0;
-  background-color: blue;
-  display: inline;
 }
 
 .hero nav li {
   display: inline-block;
-  list-style-type: none;
+  list-style: none;
   margin-left: 10px;
-  border: 1px solid white;
+  border: 1px;
 }
 
 .aligment-nav {
   background-color: violet;
+}
+
+#detalhe {
+  color: #FFF;
+  padding: 10%;
+  background-image:url(../imagens/bg_detalhe.png);
+  background-size: cover;
+}
+
+#detalhe strong {
+  padding-right: 3%;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+#detail-position {
+  padding-right: 28%;
+  font-size: 1.5em;
+  text-align: left;
 }
