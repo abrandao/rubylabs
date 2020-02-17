@@ -10,13 +10,13 @@ body {
 
 .hero {
   background-image: url(../imagens/topo.jpg);
-  height: 500px;  
+  height: 500px;
   border-top: 1px solid transparent;
+  background-size: cover;
 }
 
 .hero nav {
   background-color: blueviolet;
-  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -128,8 +128,8 @@ body {
 }
 
 footer {
-  height: 100px;
-  line-height: 100px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   background-color: #000;
   color: #5889d6;
