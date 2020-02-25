@@ -11,11 +11,11 @@
   </head>
   <body>
     <h1>Exemplo de Formulário</h1>
-    <form action="#" method="GET" class="formLogin">
+    <form action="#" method="POST" class="formLogin">
       <fieldset>
         <legend>Dados Pessoais</legend>
         <label>Email</label>
-        <input type="email">
+        <input type="email" required>
         <br>
         <label>Número de Filhos</label>
         <input type="number" min="0" max="1000">
@@ -33,8 +33,49 @@
         Feminino
         </label>
         <br>
-        <input type="submit" value="Enviar">
+        <input type="hidden" name="expira" value="2020-12-30">
+        <label>Estado</label>
+        <select name="estado">
+          <option value="0">Selecione</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+        </select>
       </fieldset>
+      <fieldset>
+        <legend>Área de interesse</legend>
+        <label>
+          <input type="checkbox" name="html" value="html">HTML
+        </label>
+        <label>
+          <input type="checkbox" name="css" value="css">CSS
+        </label>
+        <label>
+          <input type="checkbox" name="javascript" value="javascript" maxlength="5">Javascript
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Mensagem</legend>
+        <textarea name="msg" cols="30" rows="10" style="resize: none" maxlength="30"></textarea>
+        
+        <textarea name="contrato" cols="30" rows="10" style="resize: none" disabled>Aqui entra o texto do contrato que precisa ser aceito</textarea>
+        <label><input type="checkbox" checked>Li e aceito</label>
+        <input type="range" min="0" max="10" step="2">
+        <input type="time">
+        <input type="color">
+        <select size="5" multiple>
+          <option>Opção 1</option>
+          <option>Opção 2</option>
+          <option>Opção 3</option>
+          <option>Opção 4</option>
+          <option>Opção 5</option>
+        </select>
+      </fieldset>
+      <br>
+      <br>
+      <input type="submit" value="Enviar">
+      <input type="button" value="button">
+      <input type="reset" value="reset">
     </form>
   </body>
 </html>
