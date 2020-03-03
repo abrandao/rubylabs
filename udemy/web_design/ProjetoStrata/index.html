@@ -9,20 +9,23 @@
     <meta name="keywords" content="html5, tecnologia">
     
     <!--load all styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
     <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <a href="index.html" class="main-header-link">
         <img src="images/avatar.jpg" alt="texto qualquer">
       </a>
-      <h1>
-        Lorem ipsum dolor sit amet <br> 
+      <h1 class="main-header-title">
+        Lorem ipsum dolor sit amet <br>
         <strong>consectetur adipiscing elit</strong>,
         <br>
         Quisque in risus ac turpis fringilla eleifend.
         <br>
-        Ut a <a href="http://html5up.net"></a> ornare ante.
+        Ut a <a href="http://html5up.net" class="main-header-link">html5.net</a> ornare ante.
       </h1>
     </header>
     <main class="main-content">
@@ -110,8 +113,14 @@
         <h4>Text</h4>
         <p>Lorem ipsum <b>dolor</b> sit amet <strong>consectetur</strong> adipisicing elit. <i>Corporis</i> accusantium <em>minima</em>, dolorum eos quibusdam vitae natus, <sup>numquam</sup> perferendis deleniti <sub>cupiditate</sub> nemo sequi ad! At sint itaque <u>quae</u> numquam reiciendis a.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, eum. Sequi qui rem doloremque incidunt est, <code>quidem beatae, excepturi, porro repellat cum tempora expedita vero maiores laudantium ipsum</code>. <a href="#">Rerum, fuga.</a></p>
+        <h1>Título h1</h1>
+        <h2>Título h2</h2>
+        <h3>Título h3</h3>
+        <h4>Título h4</h4>
+        <h5>Título h5</h5>
+        <h6>Título h6</h6>
         <blockquote cite="http://developer.mozilla.org">
-          <p>Está é uma citação tirada da Mozilla Developer Center.</p>
+          Está é uma citação tirada da Mozilla Developer Center.
         </blockquote>
         <p>According to Mozilla's website,
           <q cite="https://www.mozilla.org/en-US/about/history/details/">
@@ -127,23 +136,36 @@
           </code>
         </pre>
         <h4>Listas</h4>
-        <h5>Não ordenada</h5>
-        <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-        </ul>
-        <h5>Ordenada</h5>
-        <ol class="ol-alternate">
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-        </ol>
-        <h5>icons</h5>
-        <ul>
-          <li><i class="fab fa-twitter"></i></li>
-          <li><i class="fab fa-facebook-square"></i></li>
-        </ul>
+        <div class="row">
+          <div class="col-2">
+            <h5>Não ordenada</h5>
+              <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+              </ul>
+            <h5>Ordenada</h5>
+            <ol class="ol-alternate">
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ol>
+          </div>
+          <div class="col-2">
+            <h5>Ordenada</h5>
+            <ul class="ul-alternate">
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+            <h5>icons</h5>
+            <ul class="ul-icons">
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-facebook-square"></i></li>
+            </ul>
+          </div>
+        </div>
+        
         <h5>Actions</h5>
         <p>
           <a href="#" class="button-default">Default</a>
@@ -301,7 +323,7 @@
           <img src="images/thumbs/03.jpg" alt="">
           <img src="images/thumbs/04.jpg" alt="">
           <img src="images/thumbs/05.jpg" alt="">
-          <img src="images/thumbs/06.jpg" alt="">         
+          <img src="images/thumbs/06.jpg" alt="">
         </div>
 
         <h4>Left &amp; Right</h4>
