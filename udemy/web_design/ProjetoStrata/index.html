@@ -83,29 +83,44 @@
       <section class="main-content-section">
         <h3>Get in Touch</h3>
         <p>consectetur adipiscing elit. Quisque in risus ac turpis fringilla eleifend. Ut a ornare ante. Donec eu mollis tortor, sit amet eleifend enim. Phasellus nec libero sagittis, laoreet libero et, laoreet nulla.</p>
-        <form action="#" method="POST">
-          <label for="nome">Nome</label>
-          <input type="text" name="nome" id="nome">
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email">
-          <label for="mensagem">Digite sua mensagem</label>
-          <input type="text" name="mensagem" id="mensagem">
-          <input type="submit" value="Enviar">
-        </form>
-        <address>
-          <p>
-            <span>Endereço</span>
-            1234 Somewhere Rd. Nashville, TN 00000 United States
-          </p>
-          <p>
-            <span>Telefone</span>
-            000-000-000
-          </p>
-          <p>
-            <span>E-mail</span>
-            email@server.com
-          </p>
-        </address>
+        <div class="row">
+          <div class="col-2-3">
+            <form action="#" method="POST">
+              <div class="row">
+                <div class="col-2">
+                  <label for="nome">Nome</label>
+                  <input type="text" name="nome" id="nome" placeholder="Nome completo">
+                </div>
+                <div class="col-2">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" placeholder="E-mail">
+                </div>
+              </div>
+                
+                <label for="mensagem">Digite sua mensagem</label>
+                <textarea type="text" name="mensagem" id="mensagem" placeholder="Digite sua mensagem"></textarea>
+                <input type="submit" class="button-default button-default-stroke button-default-big" value="Enviar">
+
+            </form>
+          </div>
+          <div class="col-1-3">
+            <address>
+              <p>
+                <span>Endereço</span>
+                1234 Somewhere Rd. Nashville, TN 00000 United States
+              </p>
+              <p>
+                <span>Telefone</span>
+                000-000-000
+              </p>
+              <p>
+                <span>E-mail</span>
+                email@server.com
+              </p>
+            </address>
+          </div>
+        </div>
+        <!-- end row -->
       </section>
 
       <section class="main-content-section">
