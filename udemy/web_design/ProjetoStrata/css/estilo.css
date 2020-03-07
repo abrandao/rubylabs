@@ -63,6 +63,14 @@ blockquote {
   padding: .5em 0 .5em 1.5em;
 }
 
+blockquote p {
+  margin-bottom: .5em;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 code {
   background: #f7f7f7;
   border-radius: ·35em;
@@ -85,6 +93,14 @@ ul, ol {
 
 li {
   padding: .5em;
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: block;
 }
 
 .ul-alternate {
