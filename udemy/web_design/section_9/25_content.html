@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Página de exemplo da estrutura básica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+      div {
+        border: 3px solid red;
+        padding: 25px;
+        position: relative;
+        margin: 25px;
+      }
+      div:before {
+        content: "before: ";
+        background: #ccc;
+      }
+      div:after {
+        content: "";
+        background: red;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div> Texto principal da div</div>
+    <article>
+      <p>parágrafo <a href="#">Antes do título.</b></a></p>
+      <h3>
+        Título
+      </h3>
+      <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+      <p>parágrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+    </article>
+    <ul>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="http://serfrontend.com" target="_blank">link externo</a></li>
+      <li><a href="http://serfrontend.com/qq.pdf" target="_blank">link externo</a></li>
+      <li><a href="../section_7/19_border_radius.html" target="_blank" title="Veja o exercício anterior">link interno</a></li>
+    </ul>
+  </body>
+</html>
