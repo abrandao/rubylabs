@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Página de exemplo da estrutura básica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <style>
+      div p:nth-of-type(3) {
+        color:red;
+      }
+      .destaque {
+        background-color: #ddd;
+      }
+      .destaque:nth-of-type(1) {
+        color: orange;
+      }
+      .destaque:first-child {
+        color: blue;
+      }
+      p:last-child {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="destaque">Meu parágrafo</p>
+      <p>Meu parágrafo</p>
+      <hr>
+      <p class="destaque">Meu parágrafo</p>
+      <p>Meu parágrafo</p>
+      <hr>
+      <p>Meu parágrafo</p>
+      <p class="destaque">Meu parágrafo</p>
+      <hr>
+      <p>Meu parágrafo</p>
+      <p>Meu parágrafo</p>
+    </div>
+  </body>
+</html>
