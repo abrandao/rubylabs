@@ -5,6 +5,16 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oxygen";
 }
+.clearfix:after, .row:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.maxwidth {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .button {
   display: inline-block;
   padding: .9em 2.5em;
@@ -15,6 +25,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button:hover {
   background: #37a0a0;
+}
+.icon-play {
+  height: 5em;
+  display: none;
+}
+.icon-play img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .top-header {
   text-align: center;
@@ -114,4 +132,84 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1em;
   text-decoration: none;
   color: white;
+}
+
+/* ===== Media queries ===== */
+@media screen and (min-width: 48.75em) {
+  .top-header-logo {
+    float: left;
+  }
+  .icon-play {
+    display: block;
+  }
+  .top-nav {
+    background: transparent;
+    float: right;
+    margin-top: 1.5625em;
+  }
+  .top-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .top-nav li {
+    display: inline-block;
+    padding-left: 1.25em;
+  }
+  .top-nav a {
+    color: #713a84;
+    padding: 1em;
+  }
+  .top-nav a:hover {
+    background: #e7d9fc;
+  }
+  .top-content {
+    background: #521a66;
+    color: #ffffff;
+  }
+  .top-content-title, .top-content-subtitle {
+    color: #ffffff;
+  }
+  .main-content-article .button {
+    float: right;
+  }
+
+  /* ==== GRID ===== */
+  .col-1-4 {
+    width: 44%;
+    margin: 3%;
+    float: left;
+  }
+
+}
+
+@media screen and (min-width: 62.5em) { /* 1000 / 16 */
+  .top-content {
+    background: #521a66 url(../images/bg_topo_1198x670.jpg);
+    background-position: center bottom;
+    height: 20em;
+    padding-top: 17em;
+  }
+}
+
+@media screen and (min-width: 74em) {
+  .top-content {
+    background-image: url(../images/bg_topo_1600x1374.jpg);
+    padding: 19em 20em 10em;
+    background-position: center top;
+  }
+  .icon-play {
+    height: 7em;
+  }
+  .col-1-4 {
+    width: 23%;
+    margin: 1%;
+  }
+  .col-1-2 {
+    width: 48%;
+    margin: 1%;
+    float: left;
+  }
+  .main-content-article .button {
+    float: none;
+  }
 }
