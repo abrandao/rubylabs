@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Página de exemplo da estrutura básica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Picture</h1>
+    <!--
+    <img src="http://lorempixel.com/400/200/" srcset="http://lorempixel.com/600/300/ 600w, http://lorempixel.com/800/400/ 800w" alt="texto alternativo">
+    <picture>
+      <source media="(min-width: 680px)" srcset="images/img-big.png">
+      <source media="(min-width: 465px)" srcset="images/img-med.png">
+      <img src="images/img.png" alt="decription alternative">
+    </picture>
+    <picture>
+      <source srcset="imagem.svg" type="img/svg+xml">
+      <source srcset="imagem.webp" type="img/webp">
+      <img src="imagem.png" alt="fallback">
+    </picture>
+    -->
+    <picture>
+      <source media="(min-width: 480px)" sizes="33vw" srcset="img/1280.jpg 1280w, img/960.jpg 960w, img/480.jpg 480w">
+      <source sizes="100vw" srcset="img/822_mob.jpg 822w, img/640_mob.jpg 640, img/320_mob.jpg 320w">
+      <img src="img/1280_mob.jpg 1280w," alt="texto alternativo">
+    </picture>
+  </body>
+</html>
