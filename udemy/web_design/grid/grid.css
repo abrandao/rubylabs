@@ -1,15 +1,8 @@
-.gridContainer{
-    width: 300px;
-    background: #ccc;
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px;
-    grid-template-columns: repeat(2, 75px), 150px;
-}
 .gridItem{
     background: #999;
     font-size: 2em;
     font-family: sans-serif;
+    padding: 5px 15px;
 }
 .gridItem:nth-child(even){
     background: #999;
@@ -17,4 +10,17 @@
 }
 .gridItem:nth-child(odd){
     background: #eee;
+}
+.gridContainer{
+  width: 100%;
+  background: #ccc;
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px; */
+  grid-template-columns: 100px 1fr 2fr;
+  grid-template-rows: 100px 100px;
+  /* 
+  grid-row-gap: 30px;
+  grid-column-gap: 12px;
+  */
+  grid-gap: 30px 10px;
 }
