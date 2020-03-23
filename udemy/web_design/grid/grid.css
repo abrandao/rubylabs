@@ -1,0 +1,20 @@
+.gridContainer{
+    width: 300px;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: repeat(2, 75px), 150px;
+}
+.gridItem{
+    background: #999;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+.gridItem:nth-child(even){
+    background: #999;
+    color: white;
+}
+.gridItem:nth-child(odd){
+    background: #eee;
+}
