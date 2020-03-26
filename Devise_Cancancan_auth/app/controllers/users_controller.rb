@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+    
+  before_action :authenticate_user!
+  load_and_authorize_resource
+  #before_filter :authorize_admin, only: :create
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to '/', :alert => exception.message
+  end
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -71,4 +80,10 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:admin, :name)
     end
+
+    def authorize_admin
+      return unless !current_user.admin?
+      redirect_to root_path, alert: 'Admins only!'
+    end
+
 end

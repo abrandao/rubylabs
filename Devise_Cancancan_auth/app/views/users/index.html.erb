@@ -13,7 +13,8 @@
 
   <tbody>
     <%= current_user.name %>
-    <% @users.each do |user| %>
+    <% @users.each do |user
+    | %>
       <tr>
         <td><%= user.admin %></td>
         <td><%= user.name %></td>
@@ -29,3 +30,13 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<br>
+<br>
+<%= link_to 'User Registration', new_user_registration_path %>
+<br>
+<br>
+<% if user_signed_in? %>
+  <li>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+  </li>
+<% end %>

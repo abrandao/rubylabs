@@ -1,4 +1,12 @@
 class CarsController < ApplicationController
+  
+  before_action :authenticate_user!
+  load_and_authorize_resource
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to '/', :alert => exception.message
+  end
+  
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   # GET /cars

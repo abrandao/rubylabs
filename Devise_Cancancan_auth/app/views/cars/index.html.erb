@@ -26,3 +26,12 @@
 <% if can? :create, Car %>
   <%= link_to 'New Car', new_car_path %>
 <% end %>
+<% if user_signed_in? %>
+  <li>
+
+    <label>Name:</label>
+    <%= current_user.name %>
+    <br>
+    <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+  </li>
+<% end %>
