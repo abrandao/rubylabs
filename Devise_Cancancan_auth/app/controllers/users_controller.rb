@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
     
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   load_and_authorize_resource
-  #before_filter :authorize_admin, only: :create
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to '/', :alert => exception.message
@@ -68,7 +67,7 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

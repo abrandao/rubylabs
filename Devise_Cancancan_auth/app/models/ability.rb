@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     else
       can [:read, :update, :destroy], Car
+      #can :manage, User
     end
   end
 end

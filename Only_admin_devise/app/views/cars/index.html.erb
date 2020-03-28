@@ -23,16 +23,14 @@
 </table>
 
 <br>
-<% if can? :create, Car %>
-  <%= link_to 'New Car', new_car_path %>
-<% end %>
+
+<%= link_to 'New Car', new_car_path %>
+
 <% if user_signed_in? %>
   <li>
-
     <label>Name:</label>
-    <%= current_user.name %>
+    <%= current_user.email %>
     <br>
     <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
   </li>
 <% end %>
-<%= link_to 'Users', users_path %>
