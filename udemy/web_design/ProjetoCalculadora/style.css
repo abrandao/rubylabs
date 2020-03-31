@@ -1,0 +1,23 @@
+#gridContainer {
+  width: 20em;
+  margin: 6em auto;
+  display: grid;
+  background: orange;
+}
+.gridItem {
+  padding: .5em;
+  font-family: sans-serif;
+}
+button {
+  width: 5em;
+}
+.end {
+  display: inline;
+  background-color: yellow;
+}
+.final {
+  background: blue;
+  display: inline;
+  grid-column: 4 / 5;
+  grid-row: 1 / 6;
+}
