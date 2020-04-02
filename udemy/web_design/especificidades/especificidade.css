@@ -1,0 +1,15 @@
+.jumbotron {
+  background: rgba(0, 0, 0, .5);
+}
+
+.jumbotron__text {
+  color: white;
+}
+
+.jumbotron__title {
+  color: red;
+}
+
+p {
+  color: red;
+}
