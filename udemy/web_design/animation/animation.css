@@ -1,0 +1,77 @@
+@keyframes anda {
+  0% {
+    transform: translateX(0);
+    background: yellow;
+  }
+  100% {
+    transform: translateX(1000px);
+    background: blue;
+  }
+}
+
+#anima-time div {
+  width: 50px;
+  height: 50px;
+  border: 2px solid red;
+}
+
+#anima-time div:nth-child(1) {
+  /*
+  animation: anda;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  */
+  animation: anda 2s ease-in-out;
+  animation-iteration-count: 4;
+  /* ease-in acelera no início e o ease-out acelera no final */
+}
+#anima-time div:nth-child(2) {
+  /*
+  animation: anda;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  */
+
+  animation: anda 2s ease-in-out infinite alternate;
+}
+#anima-time div:nth-child(3) {
+  /*
+  animation: anda;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  */
+  animation: anda 2s ease-in-out 1s infinite alternate;
+}
+#anima-time div:nth-child(4) {
+
+  background: red;
+  
+  animation: anda;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  /* animation: anda 2s ease-in-out 1s infinite alternate; */
+}
+#anima-time div:nth-child(5) {
+  background: red;
+  
+  animation: anda;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  /* animation: anda 2s ease-in-out 1s infinite alternate; */
+}
+#anima-time div:nth-child(5):hover {
+  animation-play-state: paused;
+}
