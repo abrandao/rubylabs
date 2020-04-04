@@ -1,0 +1,43 @@
+@keyframes slide {
+  0%, 22%, 100% {
+    transform: translateY(0);
+  }
+  25%, 47% {
+    transform: translateY(-50vh);
+  }
+  50%, 72% {
+    transform: translateY(-100vh);
+  }
+  75%, 97% {
+    transform: translateY(-150vh);
+  }
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  background: #1a1818;
+  margin: 0;  
+}
+
+#slide-externo {
+  width: 80vw;
+  height: 50vh;
+  border: 10px solid white;
+  box-shadow: 0 0 10px black;
+  margin-left: 10vw;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#slide-interno {
+  width: 100%;
+  animation: slide 15s infinite cubic-bezier(.5, -0.73, .59, 1.77);
+}
+
+#slide-interno img {
+  display: block;
+  height: 50vh;
+  width: 100%;
+  /* object-fit: cover; */
+}
