@@ -43,3 +43,28 @@ function controle_de_decisoes() {
   }
   
 }
+
+
+// Exercício Proposto aula 172
+function exercicio_sorteio() {
+  // Fazer jogador1 digitar um número
+  var j1 = parseInt(prompt('Jogador 1 - Digite um número: '));
+
+  // Fazer jogador2 digitar um número
+  var j2 = parseInt(prompt('Jogador 2 - Digite um número: '));
+
+  // Sortear um número entre 0 e 1
+  var sort = Math.round(Math.random());
+
+  // Se o número sorteado for 0, ganha quem escolher o número MENOR
+  if (j1 == j2) {
+    alert("Empate!");
+  } else if (sort == 1 && j1 > j2) {
+    alert("O jogador 1 venceu!" + " Sorteio: " + sort);
+  } else if (sort == 0 && j1 < j2) {
+    alert("O jogador 1 venceu!" + " Sorteio: " + sort);
+  } else {
+    alert("O jogador 2 venceu!" + " Sorteio: " + sort);
+  }
+  
+}
