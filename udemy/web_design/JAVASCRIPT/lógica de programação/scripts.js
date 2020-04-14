@@ -68,3 +68,34 @@ function exercicio_sorteio() {
   }
   
 }
+
+
+// OPERADORES LÓGICOS
+function operadores_logicos() {
+  var n1 = parseFloat(prompt('Digite um número: '));
+  var n2 = parseFloat(prompt('Digite outro número: '));
+
+  var media = (n1 + n2) / 2;
+  alert(media > 5);
+
+  if(n1 > 0 && n2 > 0 && media > 5) {
+    alert("Você foi aprovado!");
+  } else {
+    alert("Você não foi aprovado...");
+  }
+}
+
+// EXERCÍCIO OPERADORES LÓGICOS
+function exercicio_operadores_logicos() {
+  var n1 = parseFloat(prompt('Digite um número: '));
+  var n2 = parseFloat(prompt('Digite outro número: '));
+
+  var media = (n1 + n2) / 2;
+  alert(`Media: ${media}`);
+
+  if(n1 == 0 || n2 == 0 || media < 5) {
+    alert("Você não foi aprovado...");
+  } else {
+    alert("Você foi aprovado!");
+  }
+}
