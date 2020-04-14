@@ -140,3 +140,15 @@ function switch_case() {
       alert('Escolha de 1 a 3');
   }
 }
+
+
+// REPETINDO AÇÕES
+function looping() {
+  var numero = prompt('Digite um número');
+  numero = parseFloat(numero);
+
+  for(var i = 1; i <= 20; i++) {
+    document.write(numero + ' x ' + i + ' = ' + (numero * i) + ' <br>');
+  }
+  document.write('Saiu do loop');
+}
