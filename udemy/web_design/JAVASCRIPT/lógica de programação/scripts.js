@@ -99,3 +99,44 @@ function exercicio_operadores_logicos() {
     alert("Você foi aprovado!");
   }
 }
+
+
+// Exercício Proposto aula 178
+function exercicio_sorteio_refatorado() {
+  // Fazer jogador1 digitar um número
+  var j1 = parseInt(prompt('Jogador 1 - Digite um número: '));
+
+  // Fazer jogador2 digitar um número
+  var j2 = parseInt(prompt('Jogador 2 - Digite um número: '));
+
+  // Sortear um número entre 0 e 1
+  var sort = Math.round(Math.random());
+
+  // Se o número sorteado for 0, ganha quem escolher o número MENOR
+  if (j1 == j2) {
+    alert("Empate!");
+  } else if (sort == 1 && j1 > j2 || sort == 0 && j1 < j2) {
+    alert("O jogador 1 venceu!" + " Sorteio: " + sort);
+  } else {
+    alert("O jogador 2 venceu!" + " Sorteio: " + sort);
+  }
+}
+
+
+// SWITCH..CASE
+function switch_case() {
+  var n = parseInt(prompt('Digite um número: '));
+  switch(n) {
+    case 1:
+      alert('Boa escolha');
+      break;
+    case 2:
+      alert('legal');
+      break;
+    case 3:
+      alert('caramba');
+      break;
+    default:
+      alert('Escolha de 1 a 3');
+  }
+}
