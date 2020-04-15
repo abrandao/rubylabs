@@ -168,3 +168,38 @@ function exercicio_looping() {
   }
   document.write('Fim da tabuada.');
 }
+
+
+// EXERCICIO MULTIPLO DE 4
+function ex_multiplo_de_4() {
+  for(i = 1004; i <= 2017; i += 4) {
+    document.write("O ano é: " + i + '.<br>');
+  }
+}
+
+
+// EXERCICIO ANO BISSEXTO
+// Regras para ano bissexto:
+// 1. Anos bissextos são múltiplos de 4
+// 2. Anos bissextos não são múltiplos de 100
+// 3. Anos bissextos são múltiplos de 400
+function ex_ano_bissexto() {
+
+  var anob = 1004;
+  while(anob <= 2030) {
+    if(!(anob % 100 === 0) || (anob % 400 === 0)) {
+      document.write(anob + '<br>');
+    } else {
+      document.write(anob + ' não é bissexto.<br>');
+    }
+    anob += 4;
+  }
+}
+
+//  for(var anob = 1890; anob <= 3000; anob++) {
+//    if(anob % 400 == 0) {
+//      document.write("Ano bissexto: " + anob + '<br>');
+//    } else if (anob % 100 != 0 && anob % 4 == 0) {
+//      document.write("Ano bissexto: " + anob + '<br>');
+//    }
+//  }
