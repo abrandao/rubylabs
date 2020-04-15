@@ -152,3 +152,19 @@ function looping() {
   }
   document.write('Saiu do loop');
 }
+
+
+// EXERCÍCIO PROPOSTO LOOPING
+function exercicio_looping() {
+  var numero = prompt('Digite um número');
+  numero = parseFloat(numero);
+  var indice = 0;
+  while(indice <= 100) {
+    document.write(numero + ' x ' + indice + ' = ' + (numero + indice) + '<br>');
+    if(indice % 10 === 0 && indice != 0) {
+      document.write('<hr>');
+    }
+    indice++;
+  }
+  document.write('Fim da tabuada.');
+}
