@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Logica de Programação Javascript</title>
+      <meta charset="utf-8">
+      <script src="mini_calculadora.js"></script>
+  </head>
+  <body>
+    <h1>Mini Calculadora</h1>
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">x</button>
+    <button onclick="dividir()">/</button>
+    <div id="output"></div>
+    <script>
+      var n1 = prompt('Digite um número: ');
+      n1 = parseFloat(n1);
+
+      escreve();
+
+      function escreve() {
+        var output = document.querySelector('#output');
+        output.innerHTML = n1;
+      }
+
+      function somar() {
+        var n = prompt('Digite outro número: ');
+        n = parseFloat(n);
+
+        n1 += n;
+        escreve();
+      }
+
+      function subtrair() {
+        var n = prompt('Digite outro número: ');
+        n = parseFloat(n);
+
+        n1 -= n;
+        escreve();
+      }
+
+      function multiplicar() {
+        var n = prompt('Digite outro número: ');
+        n = parseFloat(n);
+
+        n1 *= n;
+        escreve();
+      }
+
+      function dividir() {
+        var n = prompt('Digite outro número: ');
+        n = parseFloat(n);
+
+        n1 /= n;
+        escreve();
+      }
+    </script>
+  </body>
+</html>

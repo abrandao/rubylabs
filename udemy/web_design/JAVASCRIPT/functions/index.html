@@ -7,14 +7,14 @@
   </head>
   <body>
     <h1>Lógica de programação com Javascript</h1>
-      
+
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+
     <div id="output">teste</div>
     <script>
       var output = document.querySelector('#output');
       var mensagem = '';
-      for (var i = 0; i < 101; i++) {
-        mensagem += 'i: ' + i + '<br>';
-      }
       output.innerHTML = mensagem;
     </script>
   </body>

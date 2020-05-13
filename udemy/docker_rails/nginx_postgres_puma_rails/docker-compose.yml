@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - 80:80
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: mypassword
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - compose-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "brandao@rubiti.com"
+      PGADMIN_DEFAULT_PASSWORD: "testepgadmin"
+    ports:
+      - "6543:80"
+    depends_on:
+      - db
+    networks:
+      - compose-network
+
+networks:
+  compose-network:
+    driver: bridge
