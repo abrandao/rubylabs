@@ -13,22 +13,12 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
-    networks:
-      - compose-network
-
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "brandao@rubiti.com"
-      PGADMIN_DEFAULT_PASSWORD: "testepgadmin"
+      - 5432
+  app:
+    build: .
+    volumes:
+      - ./rails_app:/rails_app
     ports:
-      - "6543:80"
+      - 3000:3000
     depends_on:
       - db
-    networks:
-      - compose-network
-
-networks:
-  compose-network:
-    driver: bridge
