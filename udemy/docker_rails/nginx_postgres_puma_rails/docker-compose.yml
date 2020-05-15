@@ -3,6 +3,11 @@ version: '3'
 services:
   web:
     image: nginx
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    depends_on:
+      - app
     ports:
       - 80:80
   db:
@@ -18,7 +23,7 @@ services:
     build: .
     volumes:
       - ./rails_app:/rails_app
-    ports:
-      - 3000:3000
+    environment:
+      - RAILS_ENV=production
     depends_on:
       - db
