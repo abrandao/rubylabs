@@ -124,6 +124,8 @@ WORKDIR /app
 
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
+RUN bundle config --global silence_root_warning 1
+RUN gem install bundler
 RUN bundle install -j 8
 
 COPY . /app

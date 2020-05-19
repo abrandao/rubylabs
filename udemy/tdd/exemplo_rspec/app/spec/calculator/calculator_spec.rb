@@ -1,0 +1,2 @@
+describe Calculator do
+end
