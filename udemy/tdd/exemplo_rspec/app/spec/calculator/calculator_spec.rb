@@ -1,2 +1,0 @@
-describe Calculator do
-end

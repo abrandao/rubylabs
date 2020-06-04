@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Área total</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Área total</h1>
+    <button button onclick="MostrarArea(largura, altura)">Mostrar área</button>
+  </body>
+  <script>
+    var largura = prompt('Digite a largura: ');
+    largura = parseFloat(largura);
+
+    var altura = prompt('Digite a altura: ');
+    altura = parseFloat(altura);
+
+    function MostrarArea(l, a) {
+      area = l * a;
+      alert('Área total: ' + area);
+    }
+  </script>
+</html>

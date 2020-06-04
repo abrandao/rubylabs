@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Calculadora</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+    <div id="output"></div>
+  </body>
+  <script>
+      var n1 = prompt('Digite um número: ');
+      n1 = parseFloat(n1);
+      output.innerHTML = n1;
+
+      function escreve(n1) {
+        var output = document.querySelector('#output');
+        output.innerHTML = n1;
+      }
+
+      function calcular(symbol) {
+        var n = prompt('Digite outro número: ');
+        n = parseFloat(n);
+        switch (symbol) {
+          case '+':
+            n1 += n;
+            break;
+          case '-':
+            n1 -= n;
+            break;
+          case '+':
+            n1 += n;
+            break;
+          case '*':
+            n1 *= n;
+            break;
+          case '/':
+            n1 /= n;
+            break;
+        }
+        escreve(n1);
+      }
+  </script>
+</html>
