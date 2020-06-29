@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+  <head>
+    <title>Calculadora</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta description="author" content="Lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+    <div id="output"></div>
+  </body>
+  <script>
+      var n2 = prompt('Digite um número: ');
+      
+      escreve(n2);
+
+      function iniciarCalculo(simbolo) {
+        var n1 = parseFloat(document.querySelector('#output').textContent);
+        var n2 = parseFloat(prompt('Digite outro número'));
+        var msg = calcular(simbolo, n1, n2);
+        escreve(msg);
+      }
+
+      function escreve(mensagem) {
+        var output = document.querySelector('#output');
+        output.innerHTML = mensagem;
+      }
+
+      function calcular(simbolo, n1, n2) {
+
+        var numeroCalculado = null;
+
+        switch (simbolo) {
+          case '+':
+            numeroCalculado = n1 + n2;
+            break;
+          case '-':
+            numeroCalculado = n1 - n2;
+            break;
+          case '*':
+            numeroCalculado = n1 * n2;
+            break;
+          case '/':
+            numeroCalculado = n1 / n2;
+            break;
+        }
+        return numeroCalculado;
+      }
+  </script>
+</html>
