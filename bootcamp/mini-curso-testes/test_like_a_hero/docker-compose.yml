@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+    
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_USER=rubiti
+      - POSTGRES_PASSWORD=FerCius_)0
+    volumes:
+      - ./tmp/postgres:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3004 -b '0.0.0.0'"
+    env_file:
+      - .env
+    volumes:
+      - .:/test_like_a_hero
+      - gems:/gems
+    ports:
+      - "3004:3004"
+    depends_on:
+      - db
+
+volumes:
+  postgres:
+  gems:
