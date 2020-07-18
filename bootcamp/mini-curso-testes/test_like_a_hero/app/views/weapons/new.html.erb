@@ -1,0 +1,30 @@
+<%= form_with scope: :weapon, url: weapons_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :power_base %><br>
+    <%= form.text_area :power_base %>
+  </p>
+
+  <p>
+    <%= form.label :power_step %><br>
+    <%= form.text_area :power_step %>
+  </p>
+
+  <p>
+    <%= form.label :level %><br>
+    <%= form.text_area :level %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,25 @@
+<h2 class="h2">Armas Disponíveis</h2>
+ 
+<table class="table">
+  <tr class="header">
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>DESCRIPTION</th>
+    <th>CURRENT POWER</th>
+    <th>MOSTRAR</th>
+    <th>APAGAR</th>
+    <th></th>
+  </tr>
+  <% @weapons.each do |weapon| %>
+    <tr>
+      <td><%= weapon.id %></td>
+      <td><%= weapon.title %></td>
+      <td><%= weapon.description %></td>
+      <td><%= weapon.current_power %></td>
+      <td><%= link_to 'Mostrar', weapon_path(weapon) %></td>
+      <td><%= link_to 'Apagar', weapon_path(weapon),
+              method: :delete,
+              data: { confirm: 'Você tem certeza?' } %></td>
+    </tr>
+  <% end %>
+</table>
