@@ -7,7 +7,7 @@ RSpec.describe Weapon, type: :model do
   expect(weapon.current_power).to eq(weapon.power_base + (weapon.level * weapon.power_step))
  end
 
- it 'sets the correct weapom full title' do
+ it 'sets the correct weapon full title' do
   weapon = build(:weapon)
   expect(weapon.title).to eq("#{weapon.name} ##{weapon.level}")
  end
