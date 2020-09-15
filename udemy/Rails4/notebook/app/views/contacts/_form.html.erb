@@ -1,6 +1,15 @@
-<%= form_for(@contact, html: {class: "basic-grey"}) do |f| %>
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
 
-  <h1><%= @contact.model_name.human %></h1>
+      <ul>
+      <% @contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :name %><br>
@@ -11,53 +20,14 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :kind_id %>
-    <%= collection_select(:contact, :kind_id, @kind_options_for_select, :id, :description) %>
-  </div>  
-
-  <%= f.fields_for :address do |address_fields| %>
-    <div class="field">
-      <%= address_fields.label :street %><br>
-      <%= address_fields.text_field :street %>
-    </div>
-    <div class="field">
-      <%= address_fields.label :city %><br>
-      <%= address_fields.text_field :city %>
-    <div class="field">
-      <%= address_fields.label :state %><br>
-      <%= address_fields.select :state, options_for_states(@contact.address.state) %>
-    </div>
-  <% end %>
-
-  <div id="phones">    
-    <%= f.fields_for :phones do |phones_fields| %>
-      <%= render partial: "phone_fields", locals: { f: phones_fields } %>
-    <% end %>    
-    <div class="field">
-      <%= f.label :phones, "<span class='fa fa-phone' aria-hidden='true'></span>".html_safe %><br>
-      <%= link_to_add_association('[Adicionar Telefone]', f, :phones) %>
-    </div>    
+    <%= f.label :kind_id %><br>
+    <%= f.text_field :kind_id %>
   </div>
-
   <div class="field">
     <%= f.label :rmk %><br>
     <%= f.text_area :rmk %>
   </div>
-  <div class="actions">    
-    <%= f.submit t('buttons.save'), class: "btn btn-primary" %>
-    <%= link_to t('buttons.back'), contacts_path, class: "btn btn-success" %>
+  <div class="actions">
+    <%= f.submit %>
   </div>
-
-    <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= "#{pluralize(@contact.errors.count, 'error')} #{t('messages.errors')}:"  %></h2>
-
-      <ul>
-      <% @contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
 <% end %>

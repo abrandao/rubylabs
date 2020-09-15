@@ -3,9 +3,11 @@
 one:
   street: MyString
   city: MyString
+  state: MyString
   contact_id: 
 
 two:
   street: MyString
   city: MyString
+  state: MyString
   contact_id: 
