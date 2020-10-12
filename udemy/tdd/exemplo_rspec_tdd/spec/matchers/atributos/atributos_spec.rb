@@ -18,15 +18,25 @@ describe 'Atributos' do
     puts ">>>>>>>>> DEPOIS de cada teste"
   end
 
-  before(:each) do
-    @pessoa = Pessoa.new
-    puts ">>>>>>>> ANTES de CADA teste"
-  end
+#  before(:each) do
+#    @pessoa = Pessoa.new
+#    puts ">>>>>>>> ANTES de CADA teste"
+#  end
+#
+#  after(:each) do
+#    @pessoa.nome = "Sem nome"
+#    puts ">>>>>>>>> #{@pessoa.inspect}"
+#    puts ">>>>>>>> DEPOIS de CADA teste"
+#  end
 
-  after(:each) do
-    @pessoa.nome = "Sem nome"
-    puts ">>>>>>>>> #{@pessoa.inspect}"
-    puts ">>>>>>>> DEPOIS de CADA teste"
+  around(:each) do |teste|
+    puts "ANTES"
+    @pessoa = Pessoa.new
+
+    teste.run #roda o teste
+
+    @pessoa.nome = "Sem nome!"
+    puts "DEPOIS >>>>>>>> #{@pessoa.inspect}"
   end
 
   it 'have_attributes' do
