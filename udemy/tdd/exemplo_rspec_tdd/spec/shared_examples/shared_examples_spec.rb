@@ -10,9 +10,9 @@ end
 describe 'Pessoa' do
   subject(:pessoa) { Pessoa.new }
 
-  it_behaves_like 'status', :feliz
+  include_examples 'status', :feliz
   it_behaves_like 'status', :triste
-  it_behaves_like 'status', :contente
+  it_should_behave_like 'status', :contente
   
 #  it 'feliz!' do
 #    pessoa.feliz!
