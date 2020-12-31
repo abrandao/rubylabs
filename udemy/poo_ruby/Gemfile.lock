@@ -6,7 +6,7 @@ GEM
     lerolero_generator (1.0.1)
     mini_portile2 (2.4.0)
     necromancer (0.5.1)
-    nokogiri (1.10.5)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pastel (0.7.3)
       equatable (~> 0.6)
