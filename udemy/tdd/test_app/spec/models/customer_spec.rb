@@ -2,11 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Customer, type: :model do
   
-  fixtures :customers
-  
-  it 'Create a customer' do
-   customer = customers(:fulano)
-   
-   expect(customer.full_name).to eq("Sr. Fulano Pires")
+  it '#full_name' do
+   customer = create(:customer)
+   expect(customer.full_name).to start_with("Sr. ")
   end
+
+  it { expect {create(:customer) }.to change{Customer.all.size}.by(1) }
 end

@@ -35,6 +35,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0'
   # Capybara helps you test web applications by simulating how a real user would interact with your app
   gem 'capybara'
+  # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer
+  gem 'factory_bot_rails', '~> 6.1'
+  # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc
+  gem 'faker', '~> 2.16'
 end
 
 group :development do
