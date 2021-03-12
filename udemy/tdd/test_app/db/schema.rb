@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2021_03_09_155339) do
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.boolean "vip"
+    t.integer "days_to_pay"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

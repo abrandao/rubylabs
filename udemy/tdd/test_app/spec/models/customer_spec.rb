@@ -7,6 +7,11 @@ RSpec.describe Customer, type: :model do
    expect(customer.full_name).to start_with("Sr. Anderson Brandão")
   end
 
+  it '#heritage' do
+    customer = create(:customer_default)
+    expect(customer.vip).to eq(false)
+   end
+
   it '#full_name' do
     customer = create(:user) # ou create(:customer)
     expect(customer.full_name).to start_with("Sr. ")
