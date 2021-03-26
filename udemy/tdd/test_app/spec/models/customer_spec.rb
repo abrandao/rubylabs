@@ -5,8 +5,7 @@ RSpec.describe Customer, type: :model do
   it '#full_name - Sobrescrevendo Atributo' do
    customer = create(:customer, name: "Anderson Brandão")
    customer1 = create(:customer, name: "Anderson Brandão")
-   puts customer.email
-   puts customer1.email
+ 
    expect(customer.full_name).to start_with("Sr. Anderson Brandão")
   end
 

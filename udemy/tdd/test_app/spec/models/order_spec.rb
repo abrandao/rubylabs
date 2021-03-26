@@ -8,7 +8,6 @@ RSpec.describe Order, type: :model do
 
   it 'Tem 3 pedidos - create_list' do
     orders = create_list(:order, 3, description: "Testeee")
-    puts orders.inspect
     expect(orders.count).to eq(3)
   end
 
