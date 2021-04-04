@@ -1,3 +1,6 @@
+#webmock gem
+require 'webmock/rspec'
+
 RSpec.configure do |config|
   
   #FactoryBot Lint
