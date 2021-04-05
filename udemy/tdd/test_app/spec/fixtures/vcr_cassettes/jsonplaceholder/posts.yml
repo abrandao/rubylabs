@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://jsonplaceholder.typicode.com/posts/2
+    uri: "<API-URL>/posts/2"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 04 Apr 2021 13:15:12 GMT
+      - Mon, 05 Apr 2021 20:00:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -27,8 +27,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d17e2825239c5f169d345ba878eafbd521617542112; expires=Tue, 04-May-21
-        13:15:12 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
+      - __cfduid=d8390c80ab411e88b93f04bd6841f5a281617652811; expires=Wed, 05-May-21
+        20:00:11 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax
       X-Powered-By:
       - Express
       X-Ratelimit-Limit:
@@ -56,19 +56,19 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '99'
+      - '11165'
       Cf-Request-Id:
-      - '093e9efbbf000051c04732f000000001'
+      - '094538208c0000f697b0b13000000001'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=zkk5Q%2FWQe%2FcRuJrKdPXITixz2z6AAH4KLILBpfnP69O3r6rKN2fmPah3QR2uytUquMDNDTqjAmWn5NBkLr%2BUx%2BvSmt8zlAUyUad7AL1OLlK1jmud500tcR%2FIpqzb"}],"group":"cf-nel"}'
+      - '{"max_age":604800,"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=9t7Ey4OAYXBsKlQwhBFB37z64fOVBQN%2BJVZ2vGxx9DjLibXqM1jc%2FVelI5PLfrLiQcY7DszKh1cmS%2FOzLVS5mhsxdqmG80rlhKJ%2FtSvNojI%2BAC%2FAm%2BW6PSllJJqz"}]}'
       Nel:
       - '{"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 63aacdd939bf51c0-GRU
+      - 63b55c7a7ad1f697-GRU
       Alt-Svc:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -80,5 +80,5 @@ http_interactions:
           "title": "qui est esse",
           "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
         }
-  recorded_at: Sun, 04 Apr 2021 13:15:12 GMT
+  recorded_at: Mon, 05 Apr 2021 20:00:11 GMT
 recorded_with: VCR 6.0.0
