@@ -45,6 +45,9 @@ group :development, :test do
   gem 'webmock', '~> 3.12', '>= 3.12.2'
   # Record your test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurate tests.
   gem 'vcr', '~> 6.0'
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality that, if written by hand, would be much longer, more complex, and error-prone.
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
+
 end
 
 group :development do
