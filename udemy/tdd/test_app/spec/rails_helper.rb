@@ -33,6 +33,9 @@ end
 
 RSpec.configure do |config|
 
+
+  config.include Devise::Test::IntegrationHelpers, type: :request
+
   # Shoulda Matchers
   Shoulda::Matchers.configure do |config|
     config.integrate do |with|
