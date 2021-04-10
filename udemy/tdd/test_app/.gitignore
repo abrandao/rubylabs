@@ -35,3 +35,8 @@ yarn-debug.log*
 .yarn-integrity
 .env
 .dockerignore
+
+# database
+db/postgres
+udemy/tdd/test_app/db/postgres
+/home/brandao/Programação/studies/udemy/tdd/test_app/db/postgres
