@@ -50,7 +50,10 @@ group :development, :test do
   gem 'vcr', '~> 6.0'
   # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners to test common Rails functionality that, if written by hand, would be much longer, more complex, and error-prone.
   gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
-
+  # WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application.
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
+  # Run Selenium tests more easily with install and updates for all supported webdrivers.
+  gem 'webdrivers', '~> 4.6'
 end
 
 group :development do

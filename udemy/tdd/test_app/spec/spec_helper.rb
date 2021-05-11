@@ -1,12 +1,28 @@
 #webmock gem
 require 'webmock/rspec'
+require 'capybara/rspec'
+require 'webdrivers'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
   config.configure_rspec_metadata!
   config.filter_sensitive_data('<API-URL>') { 'https://jsonplaceholder.typicode.com' }
+  config.ignore_localhost = true
 end
+
+# With activesupport gem
+driver_hosts = Webdrivers::Common.subclasses.map { |driver| URI(driver.base_url).host }
+
+VCR.configure { |config| config.ignore_hosts(*driver_hosts) }
+
+# Capybara Chrome Headless
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new app, browser: :chrome, options: Selenium::WebDriver::Chrome::Options.new(args: %w[headless disable-gpu])
+end
+
+Capybara.javascript_driver = :chrome
+
 
 RSpec.configure do |config|
   

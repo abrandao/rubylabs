@@ -12,4 +12,10 @@ RSpec.describe "Customers", type: :request do
     expect(response).to have_http_status(302)
   end
 
+  it 'responds a 200 response' do
+    customer = create(:customer)
+    get "/customers/#{customer.id}"
+    expect(response).to have_http_status(302)
+  end
+
 end
