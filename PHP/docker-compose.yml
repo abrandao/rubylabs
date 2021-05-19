@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  # Application service layer
+  php:
+    build:
+      context: .
+    container_name: phpdocker
+    volumes:
+      - ".:/var/www/html"
+    ports:
+      - "9000:9000"
+    command: php -S 0.0.0.0:9000 -t public/
